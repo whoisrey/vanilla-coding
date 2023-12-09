@@ -1,4 +1,15 @@
+/* reset */
 @import "./reset.css";
+
+a{
+  text-decoration: none;
+  padding: 15px;
+  color: #202124;
+}
+
+a:hover {
+  text-decoration: underline;
+}
 
 .a11y-hidden {
   clip: rect(1px, 1px, 1px, 1px);
@@ -12,15 +23,181 @@
 }
 
 .wrapper {
-  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  color: #202124;
+  background-color: #ffffff;
 }
 
-header, footer .bottom{
+/* 공통 */
+header,
+footer .top,
+footer .bottom{
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
-li {
-  display: inline-block;
-  margin: 10px;
+/* header */
+header {
+  height: 60px;
+  padding: 0px 21px;
+}
+
+header a {
+  padding: 5px;
+}
+
+header ul {
+  display: flex;
+  align-items: center;
+}
+
+header .left ul {
+  gap: 10px;
+}
+
+header .right {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+}
+
+header .right ul{
+  gap: 6px;
+}
+
+header .right .menu {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50%;
+  text-align: center;
+}
+
+header .right .menu:hover{
+  background-color: #f2f2f2;
+}
+
+header .right .profile{
+  width: 40px;
+  height: 40px;
+  background: no-repeat center/contain url(../img/smile.png);
+  border-radius: 50%;
+}
+
+header .right.profile:hover{
+  background-color: #DEE1E5;
+}
+
+/* main */
+main {
+  display: flex;
+  justify-content: center;
+  background-color: #ffffff;
+  margin-top: 53px;
+  z-index: 9999;
+}
+
+main .contents {
+  text-align: center;
+}
+
+main .contents img {
+  width: 272px;
+  height: 92px;
+}
+
+main .input-container {
+  width: 581px;
+  height: 45px;
+  margin: 23px 0 32px;
+}
+
+main .input-container input{
+  width: 382px;
+  height: 20px;
+  border: 1px solid #DEE1E5;
+  border-radius: 24px;
+  padding: 13px 150px 13px 47px;
+  font-size: 16px;
+}
+
+main .input-container input:hover{
+  border: 1px solid #D9DCE0;
+  box-shadow: rgba(32, 33, 36, 0.28) 0px 1px 6px 0px;
+}
+
+main .input-container input:focus{
+  outline: none;
+}
+
+main .input-container .search-glasses {
+  position: relative;
+  top: -70%;
+  left: -46%;
+}
+
+main .input-container .buttons{
+  display: flex;
+  position: relative;
+  top: -110%;
+  right: -82%;
+  width: 100px;
+  gap: 8px;
+}
+
+main .input-container .buttons button{
+  background: none;
+  border: none;
+}
+
+main .button-container {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+main .button-container button {
+  cursor: pointer;
+  font-size: 14px;
+  font-family: "Apple SD Gothic Neo", arial, sans-serif;
+  background-color: #f8f9fa;
+  color: #3C4043;
+  border: none;
+  border-radius: 4px;
+  padding: 9.5px 17px;
+}
+
+main .button-container button:hover{
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 1px 0px;
+}
+
+/* footer */
+footer a {
+  padding: 15px;
+}
+
+footer ul {
+  display: flex;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #f2f2f2;
+}
+
+footer .top{
+  height: 48px;
+  font-size: 15px;
+  border-bottom: 1px solid #D9DCE0;
+  padding: 0px 30px;
+}
+
+footer .bottom{
+  padding: 0 20px;
+  height: 47px;
 }
