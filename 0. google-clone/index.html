@@ -3,15 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <script src="https://kit.fontawesome.com/f0d1e34829.js" crossorigin="anonymous"></script>
+  <title>Google</title>
 </head>
-<link rel="stylesheet" href="./style.css">
+<link rel="stylesheet" href="./style/style.css">
 <body>
   <div class="wrapper">
 
     <header>
       <h1 class="a11y-hidden">Google</h1>
-      <nav class="left-header">
+      <nav class="left">
         <ul>
           <li>
             <a href="">Google 정보</a>
@@ -21,7 +22,7 @@
           </li>
         </ul>
       </nav>
-      <nav class="right-header">
+      <nav class="right">
         <ul>
           <li>
             <a href="">Gmail</a>
@@ -29,26 +30,42 @@
           <li>
             <a href="">이미지</a>
           </li>
-          <li>
-            <a href="">.</a>
+          <li class="menu">
+            <a href="">
+              <i class="fa-solid fa-ellipsis-vertical"></i>
+            </a>
           </li>
-          <li>
-            <a href="">...</a>
+          <li class="profile">
+            <a href=""></a>
           </li>
         </ul>
       </nav>
     </header>
 
     <main>
-      <div class="title-container">
+      <div class="contents">
         <img src="./img/google.png" alt="">
-        <article>
-          <input type="text">
-          <div class="button-container">
-            <button>Google검색</button>
-            <button>I'm Feeling Lucky</button>
-          </div>
-        </article>
+        <section class="input-container">
+          <label for="search">
+            <input id="search" type="text">
+            <i class="fa-solid fa-magnifying-glass search-glasses" style="color: #9aa0a5;"></i>
+            <div class="buttons">
+              <button>
+                <i class="fa-solid fa-keyboard wow"></i>
+              </button>
+              <button>
+                <i class="fa-solid fa-microphone"></i>
+              </button>
+              <button>
+                <i class="fa-solid fa-camera"></i>
+              </button>
+            </div>
+          </label>
+        </section>
+        <section class="button-container">
+          <button>Google 검색</button>
+          <button>I'm Feeling Lucky</button>
+        </section>
       </div>
     </main>
 
@@ -85,6 +102,7 @@
         </nav>
       </article>
     </footer>
+
   </div>
 </body>
 </html>
