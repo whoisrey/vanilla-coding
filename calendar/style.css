@@ -22,7 +22,7 @@ h1 {
   margin: 59.76px 0;
 }
 
-.container {
+.container, .calendar-container {
   display: flex;
   flex-direction: column;
   justify-content: center;

@@ -29,3 +29,13 @@ const monthAndYear = document.getElementById("month-year");
 clickedDay.innerText = `${currentDay}`;
 clickedDate.innerText = `${currentDate}`;
 monthAndYear.innerText = `${currentMonth} ${currentYear}`;
+// 현재 요일, 날짜, 월, 연도 표기
+
+const calendarDay = document.getElementById("calendar-day");
+const dayContainer = calendarDay.children;
+const dayRow = dayContainer[0].children;
+
+for (let i = 0; i < dayRow.length; i++) {
+  dayRow[i].innerText = day[i];
+}
+// 요일 라벨링 표기
