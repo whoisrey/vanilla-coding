@@ -18,45 +18,21 @@
 
   <body>
     <section>
-      <div class="image-box">
+      <div class="image-container">
         <img src="images/vanilla_coding_logo.png" />
       </div>
       <h1>Calendar</h1>
 
-      <!-- 달력 Start -->
-      <article class="calendar-container">
-        <div class="clicked">
-          <p>TUE</p>
-          <p>12</p>
+      <div class="container">
+        <div class="day-date">
+          <p id="day"></p>
+          <p id="date"></p>
         </div>
-        <p class="current">DEC 2023</p>
-        <table>
-          <thead>
-            <tr>
-              <th></th>
-              <th></th>
-              <th></th>
-              <th></th>
-              <th></th>
-              <th></th>
-              <th></th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th></th>
-              <th></th>
-              <th></th>
-              <th></th>
-              <th></th>
-              <th></th>
-              <th></th>
-            </tr>
-          </tbody>
-        </table>
-      </article>
+        <div class="calendar-container">
+          <p id="month-year">DEC 2023</p>
+        </div>
+      </div>
 
-      <!-- 달력 End -->
     </section>
 
     <script src="index.js"></script>

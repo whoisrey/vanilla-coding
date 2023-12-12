@@ -5,13 +5,13 @@ body {
   font-family: "Varela Round", sans-serif;
 }
 
-.image-box {
+.image-container {
   display: flex;
   justify-content: center;
   margin-top: 50px;
 }
 
-.image-box img{
+.image-container img{
   width: 150px;
 }
 
@@ -22,17 +22,28 @@ h1 {
   margin: 59.76px 0;
 }
 
-.calendar-container {
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .day-date {
   text-align: center;
 }
 
-.calendar-container .clicked p {
+.container .day-date p {
   font-size: 48px;
   font-weight: bold;
-  margin: 20px;
+  margin: 0px
 }
 
-.calendar-container .current {
+.container .day-date p:first-child {
+  margin-bottom: 20px;
+}
+
+.container .calendar-container p {
   font-size: 24px;
   font-weight: normal;
   margin-top: 50px;
