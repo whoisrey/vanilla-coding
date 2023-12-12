@@ -29,7 +29,8 @@ h1 {
   align-items: center;
 }
 
-.container .day-date {
+.container .day-date,
+.container .calendar-container {
   text-align: center;
 }
 
