@@ -1,0 +1,19 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #3474FF;
+}
+
+p {
+  font-size: 50px;
+}
+
+button {
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 6px;
+}
