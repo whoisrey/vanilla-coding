@@ -42,7 +42,59 @@ for (let i = 0; i < dayRow.length; i++) {
 
 const calendarDate = document.getElementById("calendar-date");
 const dateContainer = calendarDate.children;
-const firstDay = 8 - (currentDate % 7) + currentDay;
+const firstDay = (8 - (currentDate % 7) + currentDay) % 7;
 
 dateContainer[0].children[firstDay].innerText = 1;
-// 현재 월의 1일 판별 및 표기
+// 1일 판별 및 표기
+
+if (
+  currentMonth === 0 ||
+  currentMonth === 2 ||
+  currentMonth === 4 ||
+  currentMonth === 6 ||
+  currentMonth === 7 ||
+  (currentMonth === 9) | (currentMonth === 11)
+) {
+  for (let i = 0; i <= 31; i++) {
+    switch (i % 7) {
+      case 1:
+        for (let j = 0; j <= 4; j++) {
+          dateContainer[j].children[5].innerText = 7 * j + 1;
+        }
+        break;
+      case 2:
+        for (let j = 0; j <= 4; j++) {
+          dateContainer[j].children[6].innerText = 7 * j + 2;
+        }
+        break;
+      case 3:
+        for (let j = 0; j <= 4; j++) {
+          dateContainer[j + 1].children[0].innerText = 7 * j + 3;
+        }
+        break;
+      case 4:
+        for (let j = 0; j <= 3; j++) {
+          dateContainer[j + 1].children[1].innerText = 7 * j + 4;
+        }
+        break;
+      case 5:
+        for (let j = 0; j <= 3; j++) {
+          dateContainer[j + 1].children[2].innerText = 7 * j + 5;
+        }
+        break;
+      case 6:
+        for (let j = 0; j <= 3; j++) {
+          dateContainer[j + 1].children[3].innerText = 7 * j + 6;
+        }
+        break;
+      case 0:
+        for (let j = 0; j <= 3; j++) {
+          dateContainer[j + 1].children[4].innerText = 7 * (j + 1);
+        }
+        break;
+    }
+  }
+} else if (currentMonth === 1) {
+} else {
+}
+// 현재 월의 마지막 날까지 날짜 표기하기 & 31일 / 30일 조건 추가
