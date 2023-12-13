@@ -98,3 +98,11 @@ if (
 } else {
 }
 // 현재 월의 마지막 날까지 날짜 표기하기 & 31일 / 30일 조건 추가
+
+const prevBtn = document.getElementById("prev");
+const nextBtn = document.getElementById("next");
+
+prevBtn.addEventListener("click", () => {});
+
+nextBtn.addEventListener("click", () => {});
+// 달력의 전후버튼 추가

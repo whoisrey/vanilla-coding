@@ -49,3 +49,13 @@ h1 {
   font-weight: normal;
   margin-top: 50px;
 }
+
+.container .calendar-container .calendar{
+  display: flex;
+}
+.container .calendar-container .calendar button {
+  background: none;
+  border: none;
+  font-size: 20px;
+  width: 100px;
+}
