@@ -103,7 +103,8 @@ for (let i = 0; i < td.length; i++) {
   }
 }
 // 현재 날짜에 색상 입히기
-
+console.log(currentMonth);
+console.log(firstDay);
 const prevBtn = document.getElementById("prev");
 const nextBtn = document.getElementById("next");
 
@@ -115,29 +116,131 @@ prevBtn.addEventListener("click", () => {
   } else {
     currentMonth = Math.abs((1 - currentMonth) % 12);
   }
-  if (firstDay === 0) {
-    firstDay = 7;
-    firstDay = firstDay - 1;
-  } else {
-    firstDay = Math.abs((1 - firstDay) % 7);
+
+  if (
+    currentMonth === 3 ||
+    currentMonth === 5 ||
+    currentMonth === 8 ||
+    currentMonth === 10
+  ) {
+    if (firstDay === 0) {
+      firstDay = 7;
+      firstDay = firstDay - 2;
+    } else {
+      firstDay = Math.abs((firstDay + 5) % 7);
+    }
   }
+
+  if (
+    currentMonth === 0 ||
+    currentMonth === 2 ||
+    currentMonth === 4 ||
+    currentMonth === 6 ||
+    currentMonth === 7 ||
+    currentMonth === 9 ||
+    currentMonth === 11
+  ) {
+    if (firstDay === 0) {
+      firstDay = 7;
+      firstDay = firstDay - 3;
+    } else {
+      firstDay = Math.abs((firstDay + 4) % 7);
+    }
+  }
+
+  if (currentMonth === 1) {
+    if (firstDay === 0) {
+      firstDay = 7;
+      firstDay = firstDay;
+    } else {
+      firstDay = Math.abs(firstDay % 7);
+    }
+  }
+  // if (firstDay === 0) {
+  //   firstDay = 7;
+  //   firstDay = firstDay - 3;
+  // } else {
+  //   firstDay = Math.abs((3 - firstDay) % 7);
+  // }
+  console.log(firstDay);
   monthAndYear.innerText = `${month[currentMonth]} ${currentYear}`;
-  for (let i = 1; i <= 31; i++) {
-    switch (i % 7) {
-      case 1:
-        td[i - 1 + firstDay].innerText = i;
-      case 2:
-        td[i - 1 + firstDay].innerText = i;
-      case 3:
-        td[i - 1 + firstDay].innerText = i;
-      case 4:
-        td[i - 1 + firstDay].innerText = i;
-      case 5:
-        td[i - 1 + firstDay].innerText = i;
-      case 6:
-        td[i - 1 + firstDay].innerText = i;
-      case 0:
-        td[i - 1 + firstDay].innerText = i;
+
+  // 31일 달력 생성
+  if (
+    currentMonth === 0 ||
+    currentMonth === 2 ||
+    currentMonth === 4 ||
+    currentMonth === 6 ||
+    currentMonth === 7 ||
+    currentMonth === 9 ||
+    currentMonth === 11
+  ) {
+    for (let i = 1; i <= 31; i++) {
+      switch (i % 7) {
+        case 1:
+          td[i - 1 + firstDay].innerText = i;
+        case 2:
+          td[i - 1 + firstDay].innerText = i;
+        case 3:
+          td[i - 1 + firstDay].innerText = i;
+        case 4:
+          td[i - 1 + firstDay].innerText = i;
+        case 5:
+          td[i - 1 + firstDay].innerText = i;
+        case 6:
+          td[i - 1 + firstDay].innerText = i;
+        case 0:
+          td[i - 1 + firstDay].innerText = i;
+      }
+    }
+  }
+
+  // 30일 달력 생성
+  if (
+    currentMonth === 3 ||
+    currentMonth === 5 ||
+    currentMonth === 8 ||
+    currentMonth === 10
+  ) {
+    for (let i = 1; i <= 30; i++) {
+      switch (i % 7) {
+        case 1:
+          td[i - 1 + firstDay].innerText = i;
+        case 2:
+          td[i - 1 + firstDay].innerText = i;
+        case 3:
+          td[i - 1 + firstDay].innerText = i;
+        case 4:
+          td[i - 1 + firstDay].innerText = i;
+        case 5:
+          td[i - 1 + firstDay].innerText = i;
+        case 6:
+          td[i - 1 + firstDay].innerText = i;
+        case 0:
+          td[i - 1 + firstDay].innerText = i;
+      }
+    }
+  }
+
+  // 2월 달력 생성
+  if (currentMonth === 1) {
+    for (let i = 1; i <= 29; i++) {
+      switch (i % 7) {
+        case 1:
+          td[i - 1 + firstDay].innerText = i;
+        case 2:
+          td[i - 1 + firstDay].innerText = i;
+        case 3:
+          td[i - 1 + firstDay].innerText = i;
+        case 4:
+          td[i - 1 + firstDay].innerText = i;
+        case 5:
+          td[i - 1 + firstDay].innerText = i;
+        case 6:
+          td[i - 1 + firstDay].innerText = i;
+        case 0:
+          td[i - 1 + firstDay].innerText = i;
+      }
     }
   }
 });
@@ -148,25 +251,105 @@ nextBtn.addEventListener("click", () => {
   if (currentMonth === 0) {
     currentYear = currentYear + 1;
   }
-  firstDay = (firstDay + 1) % 7;
   console.log(firstDay);
   monthAndYear.innerText = `${month[currentMonth]} ${currentYear}`;
-  for (let i = 1; i <= 31; i++) {
-    switch (i % 7) {
-      case 1:
-        td[i - 1 + firstDay].innerText = i;
-      case 2:
-        td[i - 1 + firstDay].innerText = i;
-      case 3:
-        td[i - 1 + firstDay].innerText = i;
-      case 4:
-        td[i - 1 + firstDay].innerText = i;
-      case 5:
-        td[i - 1 + firstDay].innerText = i;
-      case 6:
-        td[i - 1 + firstDay].innerText = i;
-      case 0:
-        td[i - 1 + firstDay].innerText = i;
+  if (
+    currentMonth === 0 ||
+    currentMonth === 1 ||
+    currentMonth === 3 ||
+    currentMonth === 5 ||
+    currentMonth === 7 ||
+    currentMonth === 8 ||
+    currentMonth === 10
+  ) {
+    firstDay = (firstDay + 3) % 7;
+  }
+  if (
+    currentMonth === 4 ||
+    currentMonth === 6 ||
+    currentMonth === 9 ||
+    currentMonth === 11
+  ) {
+    firstDay = (firstDay + 2) % 7;
+  }
+  if (currentMonth === 2) {
+    firstDay = (firstDay + 1) % 7;
+  }
+
+  // 31일 달력 생성
+  if (
+    currentMonth === 0 ||
+    currentMonth === 2 ||
+    currentMonth === 4 ||
+    currentMonth === 6 ||
+    currentMonth === 7 ||
+    currentMonth === 9 ||
+    currentMonth === 11
+  ) {
+    for (let i = 1; i <= 31; i++) {
+      switch (i % 7) {
+        case 1:
+          td[i - 1 + firstDay].innerText = i;
+        case 2:
+          td[i - 1 + firstDay].innerText = i;
+        case 3:
+          td[i - 1 + firstDay].innerText = i;
+        case 4:
+          td[i - 1 + firstDay].innerText = i;
+        case 5:
+          td[i - 1 + firstDay].innerText = i;
+        case 6:
+          td[i - 1 + firstDay].innerText = i;
+        case 0:
+          td[i - 1 + firstDay].innerText = i;
+      }
+    }
+  }
+  // 30일 달력 생성
+  if (
+    currentMonth === 3 ||
+    currentMonth === 5 ||
+    currentMonth === 8 ||
+    currentMonth === 10
+  ) {
+    for (let i = 1; i <= 30; i++) {
+      switch (i % 7) {
+        case 1:
+          td[i - 1 + firstDay].innerText = i;
+        case 2:
+          td[i - 1 + firstDay].innerText = i;
+        case 3:
+          td[i - 1 + firstDay].innerText = i;
+        case 4:
+          td[i - 1 + firstDay].innerText = i;
+        case 5:
+          td[i - 1 + firstDay].innerText = i;
+        case 6:
+          td[i - 1 + firstDay].innerText = i;
+        case 0:
+          td[i - 1 + firstDay].innerText = i;
+      }
+    }
+  }
+  // 2월 달력 생성
+  if (currentMonth === 1) {
+    for (let i = 1; i <= 29; i++) {
+      switch (i % 7) {
+        case 1:
+          td[i - 1 + firstDay].innerText = i;
+        case 2:
+          td[i - 1 + firstDay].innerText = i;
+        case 3:
+          td[i - 1 + firstDay].innerText = i;
+        case 4:
+          td[i - 1 + firstDay].innerText = i;
+        case 5:
+          td[i - 1 + firstDay].innerText = i;
+        case 6:
+          td[i - 1 + firstDay].innerText = i;
+        case 0:
+          td[i - 1 + firstDay].innerText = i;
+      }
     }
   }
 });
