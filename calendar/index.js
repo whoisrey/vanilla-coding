@@ -171,3 +171,25 @@ nextBtn.addEventListener("click", () => {
   }
 });
 // 달력의 전후버튼 추가
+
+const init = () => {
+  for (let i = 1; i <= 31; i++) {
+    switch (i % 7) {
+      case 1:
+        td[i - 1 + firstDay].innerText = "";
+      case 2:
+        td[i - 1 + firstDay].innerText = "";
+      case 3:
+        td[i - 1 + firstDay].innerText = "";
+      case 4:
+        td[i - 1 + firstDay].innerText = "";
+      case 5:
+        td[i - 1 + firstDay].innerText = "";
+      case 6:
+        td[i - 1 + firstDay].innerText = "";
+      case 0:
+        td[i - 1 + firstDay].innerText = "";
+    }
+  }
+};
+// 초기화 함수
