@@ -52,6 +52,8 @@ h1 {
 
 .container .calendar-container .calendar{
   display: flex;
+  align-items: center;
+  margin-top: 6px;
 }
 .container .calendar-container .calendar button {
   background: none;
