@@ -43,7 +43,7 @@ for (let i = 0; i < dayRow.length; i++) {
 const calendarDate = document.getElementById("calendar-date");
 const dateContainer = calendarDate.children;
 const td = document.querySelectorAll("td");
-const firstDay = (8 - (currentDate % 7) + currentDay) % 7;
+let firstDay = (8 - (currentDate % 7) + currentDay) % 7;
 
 for (let i = 1; i <= 31; i++) {
   switch (i % 7) {
@@ -108,21 +108,66 @@ const prevBtn = document.getElementById("prev");
 const nextBtn = document.getElementById("next");
 
 prevBtn.addEventListener("click", () => {
+  init();
   if (currentMonth === 0) {
     currentMonth = 11;
     currentYear = currentYear - 1;
   } else {
     currentMonth = Math.abs((1 - currentMonth) % 12);
   }
+  if (firstDay === 0) {
+    firstDay = 7;
+    firstDay = firstDay - 1;
+  } else {
+    firstDay = Math.abs((1 - firstDay) % 7);
+  }
   monthAndYear.innerText = `${month[currentMonth]} ${currentYear}`;
+  for (let i = 1; i <= 31; i++) {
+    switch (i % 7) {
+      case 1:
+        td[i - 1 + firstDay].innerText = i;
+      case 2:
+        td[i - 1 + firstDay].innerText = i;
+      case 3:
+        td[i - 1 + firstDay].innerText = i;
+      case 4:
+        td[i - 1 + firstDay].innerText = i;
+      case 5:
+        td[i - 1 + firstDay].innerText = i;
+      case 6:
+        td[i - 1 + firstDay].innerText = i;
+      case 0:
+        td[i - 1 + firstDay].innerText = i;
+    }
+  }
 });
 
 nextBtn.addEventListener("click", () => {
+  init();
   currentMonth = (currentMonth + 1) % 12;
   if (currentMonth === 0) {
     currentYear = currentYear + 1;
   }
+  firstDay = (firstDay + 1) % 7;
+  console.log(firstDay);
   monthAndYear.innerText = `${month[currentMonth]} ${currentYear}`;
-  console.log(currentMonth);
+  for (let i = 1; i <= 31; i++) {
+    switch (i % 7) {
+      case 1:
+        td[i - 1 + firstDay].innerText = i;
+      case 2:
+        td[i - 1 + firstDay].innerText = i;
+      case 3:
+        td[i - 1 + firstDay].innerText = i;
+      case 4:
+        td[i - 1 + firstDay].innerText = i;
+      case 5:
+        td[i - 1 + firstDay].innerText = i;
+      case 6:
+        td[i - 1 + firstDay].innerText = i;
+      case 0:
+        td[i - 1 + firstDay].innerText = i;
+    }
+  }
 });
 // 달력의 전후버튼 추가
