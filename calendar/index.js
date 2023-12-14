@@ -131,15 +131,15 @@ const makeDate = () => {
 makeDate();
 // 현재 월의 마지막 날까지 날짜 표기하기 (수정)
 
-const clicked = (e) => {
+const clickedSth = (e) => {
   if (e.target.innerText) {
     clickedDate.innerText = `${e.target.innerText}`;
-    console.log(e);
+    clickedDay.innerText = `${day[e.target.cellIndex]}`;
   }
 };
 
 td.forEach((v) => {
-  v.addEventListener("click", clicked);
+  v.addEventListener("click", clickedSth);
 });
 // 클릭한 요일과 날짜 표기
 
