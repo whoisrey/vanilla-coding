@@ -20,6 +20,7 @@ let currentYear = today.getFullYear();
 let currentMonth = today.getMonth();
 let currentDay = today.getDay();
 let currentDate = today.getDate();
+let firstDay = (8 - (currentDate % 7) + currentDay) % 7;
 
 const dayAndDate = document.querySelector(".day-date");
 const clickedDay = document.getElementById("day");
@@ -28,8 +29,13 @@ const monthAndYear = document.getElementById("month-year");
 const td = document.querySelectorAll("td");
 
 const calendarDay = document.getElementById("calendar-day");
+const calendarDate = document.getElementById("calendar-date");
+const dateContainer = calendarDate.children;
 const dayContainer = calendarDay.children;
 const dayRow = dayContainer[0].children;
+
+const prevBtn = document.getElementById("prev");
+const nextBtn = document.getElementById("next");
 
 const makeDay = () => {
   for (let i = 0; i < dayRow.length; i++) {
@@ -38,11 +44,6 @@ const makeDay = () => {
 };
 makeDay();
 // 요일 라벨링 표기
-
-const calendarDate = document.getElementById("calendar-date");
-const dateContainer = calendarDate.children;
-
-let firstDay = (8 - (currentDate % 7) + currentDay) % 7;
 
 const makeDate = () => {
   // 31일 달력 생성
@@ -139,9 +140,6 @@ td.forEach((v) => {
 });
 // 클릭한 요일과 날짜 표기
 
-const prevBtn = document.getElementById("prev");
-const nextBtn = document.getElementById("next");
-
 prevBtn.addEventListener("click", () => {
   init();
   if (currentMonth === 0) {
@@ -236,7 +234,6 @@ nextBtn.addEventListener("click", () => {
   isCurrent();
 });
 // 다음 버튼 기능
-// 달력의 전후버튼 추가
 
 const init = () => {
   clickedDate.innerText = `${td[firstDay].innerText}`;
