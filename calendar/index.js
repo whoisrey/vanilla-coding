@@ -26,9 +26,17 @@ const clickedDay = document.getElementById("day");
 const clickedDate = document.getElementById("date");
 const monthAndYear = document.getElementById("month-year");
 
-clickedDay.innerText = `${day[currentDay]}`;
-clickedDate.innerText = `${currentDate}`;
-monthAndYear.innerText = `${month[currentMonth]} ${currentYear}`;
+const isCurrent = () => {
+  if (
+    currentMonth === today.getMonth() &&
+    currentYear === today.getFullYear()
+  ) {
+    clickedDay.innerText = `${day[currentDay]}`;
+    clickedDate.innerText = `${currentDate}`;
+    monthAndYear.innerText = `${month[currentMonth]} ${currentYear}`;
+  }
+};
+isCurrent();
 // 현재 요일, 날짜, 월, 연도 표기
 
 const calendarDay = document.getElementById("calendar-day");
@@ -166,6 +174,7 @@ prevBtn.addEventListener("click", () => {
       firstDay = firstDay - 2;
     } else {
       firstDay = Math.abs((firstDay + 5) % 7);
+      clickedDay.innerText = `${day[firstDay]}`;
     }
   }
 
@@ -183,6 +192,7 @@ prevBtn.addEventListener("click", () => {
       firstDay = firstDay - 3;
     } else {
       firstDay = Math.abs((firstDay + 4) % 7);
+      clickedDay.innerText = `${day[firstDay]}`;
     }
   }
 
@@ -192,10 +202,12 @@ prevBtn.addEventListener("click", () => {
       firstDay = firstDay;
     } else {
       firstDay = Math.abs(firstDay % 7);
+      clickedDay.innerText = `${day[firstDay]}`;
     }
   }
   monthAndYear.innerText = `${month[currentMonth]} ${currentYear}`;
   makeDate();
+  isCurrent();
 });
 // 이전 버튼 기능
 
@@ -216,6 +228,7 @@ nextBtn.addEventListener("click", () => {
     currentMonth === 10
   ) {
     firstDay = (firstDay + 3) % 7;
+    clickedDay.innerText = `${day[firstDay]}`;
   }
   if (
     currentMonth === 4 ||
@@ -224,16 +237,20 @@ nextBtn.addEventListener("click", () => {
     currentMonth === 11
   ) {
     firstDay = (firstDay + 2) % 7;
+    clickedDay.innerText = `${day[firstDay]}`;
   }
   if (currentMonth === 2) {
     firstDay = (firstDay + 1) % 7;
+    clickedDay.innerText = `${day[firstDay]}`;
   }
   makeDate();
+  isCurrent();
 });
 // 다음 버튼 기능
 // 달력의 전후버튼 추가
 
 const init = () => {
+  clickedDate.innerText = `${td[firstDay].innerText}`;
   for (let i = 1; i <= 31; i++) {
     switch (i % 7) {
       case 1:
