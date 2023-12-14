@@ -25,19 +25,7 @@ const dayAndDate = document.querySelector(".day-date");
 const clickedDay = document.getElementById("day");
 const clickedDate = document.getElementById("date");
 const monthAndYear = document.getElementById("month-year");
-
-const isCurrent = () => {
-  if (
-    currentMonth === today.getMonth() &&
-    currentYear === today.getFullYear()
-  ) {
-    clickedDay.innerText = `${day[currentDay]}`;
-    clickedDate.innerText = `${currentDate}`;
-    monthAndYear.innerText = `${month[currentMonth]} ${currentYear}`;
-  }
-};
-isCurrent();
-// 현재 요일, 날짜, 월, 연도 표기
+const td = document.querySelectorAll("td");
 
 const calendarDay = document.getElementById("calendar-day");
 const dayContainer = calendarDay.children;
@@ -53,7 +41,7 @@ makeDay();
 
 const calendarDate = document.getElementById("calendar-date");
 const dateContainer = calendarDate.children;
-const td = document.querySelectorAll("td");
+
 let firstDay = (8 - (currentDate % 7) + currentDay) % 7;
 
 const makeDate = () => {
@@ -199,12 +187,13 @@ prevBtn.addEventListener("click", () => {
   if (currentMonth === 1) {
     if (firstDay === 0) {
       firstDay = 7;
-      firstDay = firstDay;
+      firstDay = firstDay - 1;
     } else {
-      firstDay = Math.abs(firstDay % 7);
+      firstDay = Math.abs((firstDay - 1) % 7);
       clickedDay.innerText = `${day[firstDay]}`;
     }
   }
+  console.log(firstDay);
   monthAndYear.innerText = `${month[currentMonth]} ${currentYear}`;
   makeDate();
   isCurrent();
@@ -273,11 +262,33 @@ const init = () => {
 // 초기화 함수
 
 const isToday = () => {
-  if (monthAndYear.innerText === `${month[today.getMonth()]} ${currentYear}`) {
+  if (
+    monthAndYear.innerText ===
+    `${month[today.getMonth()]} ${today.getFullYear()}`
+  ) {
     for (let i of td) {
-      if (i.innerText == currentDate) i.style.color = "red";
+      if (i.innerText == currentDate) {
+        i.style.color = "orangered";
+      }
+    }
+  } else {
+    for (let i of td) {
+      i.style.color = "black";
     }
   }
-  console.log(`${month[currentMonth]} ${currentYear}`);
 };
 // 현재 날짜에 색상 입히기;
+
+const isCurrent = () => {
+  if (
+    currentMonth === today.getMonth() &&
+    currentYear === today.getFullYear()
+  ) {
+    clickedDay.innerText = `${day[currentDay]}`;
+    clickedDate.innerText = `${currentDate}`;
+    monthAndYear.innerText = `${month[currentMonth]} ${currentYear}`;
+  }
+  isToday();
+};
+isCurrent();
+// 현재 요일, 날짜, 월, 연도 표기
