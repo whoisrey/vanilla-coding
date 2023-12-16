@@ -1,2 +1,1 @@
-# vanila-coding
-https://withleche.github.io/vanila-coding/calendar
+https://withleche.github.io/vanilla-coding/calendar
