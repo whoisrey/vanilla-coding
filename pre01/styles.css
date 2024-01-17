@@ -44,6 +44,12 @@ main {
   width: 450px;
 }
 
+main form h2 {
+  font-size: 32px;
+  color: #ffffff;
+}
+
+
 
 /* footer */
 footer {
