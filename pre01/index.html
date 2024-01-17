@@ -4,8 +4,8 @@
     <meta charset="utf-8" />
     <title>Netflix</title>
     <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link rel="stylesheet" href="./styles/styles.css" />
   </head>
   <body>
     <div class="container">
@@ -32,18 +32,23 @@
           </section>
           <section class="login-container">
             <button>로그인</button>
-            <p>로그인 정보 저장</p>
-            <a href="#">도움이 필요하신가요?</a>
+            <div class="login-help">
+              <label for="">
+                <input type="checkbox">
+                <p>로그인 정보 저장</p>
+              </label>
+              <a href="#">도움이 필요하신가요?</a>
+            </div>
           </section>
         </form>
         <div class="other-container">
           <section class="signup-container">
-            <p>Netfilx 회원이 아닌가요?</p>
-            <a href="#">지금 가입하세요.</a>
+            Netfilx 회원이 아닌가요? &nbsp;
+            <a href="#">지금 가입하세요</a>
+            .
           </section>
           <section class="terms-of-use">
-            <p>이 페이지는 Google reCAPTCHA의 보호를 받아 사용자가 로봇이 아님을 확인합니다.</p>
-            <a href="#">자세히 알아보기</a>
+            <span>이 페이지는 Google reCAPTCHA의 보호를 받아 사용자가 로봇이 아님을 확인합니다.</span>&nbsp;<a href="#">자세히 알아보기</a>
           </section>
         </div>
       </main>

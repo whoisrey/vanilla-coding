@@ -1,0 +1,131 @@
+/* hidden */
+.a11y-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  margin: -1px;
+  clip-path: polygon(0 0, 0 0, 0 0);
+}
+
+
+.container {
+  margin-left: 3%;
+}
+
+body {
+  background-image : linear-gradient( rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(../images/bg.jpg);
+}
+
+/* header */
+header {
+  display: flex;
+  align-items: center;
+  height: 90px;
+}
+
+header a{
+  width: 167px;
+  height: 45px;
+}
+
+header img {
+  width: 100%;
+}
+
+/* main */
+main {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 60px 68px 40px;
+  width: 450px;
+  height: 660px;
+  color: #fff;
+  box-sizing: border-box;
+  background-color: rgba(0,0,0,.75);
+  border-radius: 4px;
+}
+
+main form {
+  flex-grow: 1;
+}
+
+main form h2 {
+  font-size: 32px;
+  margin: 0 0 28px 0;
+}
+
+main form .input-container{
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 16px;
+  color: #8C8C8C;
+}
+
+
+main form .input-container label{
+  
+}
+
+main form .input-container input{
+  background-color: #333333;
+  height: 50px;
+  padding-left: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 16px;
+  border-radius: 4px;
+  border: none;
+}
+
+main form .login-container{
+  color: #b3b3b3;
+}
+
+main form .login-container button{
+  margin: 24px 0 12px;
+  padding: 16px;
+  width: 100%;
+  border-radius: 4px;
+  background-color: #e50914;
+  color: #fff;
+}
+
+main form .login-container .login-help{
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+}
+
+main form .login-container .login-help label{
+  display: flex;
+}
+
+main .other-container .signup-container{
+  display: flex;
+  margin-top: 16px;
+  color: #737373;
+  font-weight: 400;
+}
+
+main .other-container .signup-container a{
+  color: #fff;
+}
+
+main .other-container .terms-of-use{
+  margin: 13px 0;
+  font-size: 13px;
+  line-height: 17px;
+  color: #8C8C8C;
+}
+
+main .other-container .terms-of-use a{
+  color: #0071eb;
+}
+
+/* footer */
+footer {
+  /* box-shadow: 0 0 10px cornflowerblue; */
+}
