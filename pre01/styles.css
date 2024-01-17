@@ -22,14 +22,18 @@ body {
 
 /* header */
 header {
-  box-shadow: 0 0 10px teal;
-  height: 90px;
   display: flex;
   align-items: center;
+  height: 90px;
 }
-header img {
+
+header a{
   width: 167px;
   height: 45px;
+}
+
+header img {
+  width: 100%;
 }
 
 /* main */
