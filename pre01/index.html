@@ -6,6 +6,7 @@
     <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
     <link rel="stylesheet" href="./styles/reset.css" />
     <link rel="stylesheet" href="./styles/styles.css" />
+    <script src="https://kit.fontawesome.com/f0d1e34829.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <div class="container">
@@ -33,10 +34,13 @@
           <section class="login-container">
             <button>로그인</button>
             <div class="login-help">
-              <label for="">
-                <input type="checkbox">
-                <p>로그인 정보 저장</p>
-              </label>
+              <div>
+                <input id="rememberUser" type="checkbox" checked>
+                <label for="rememberUser">
+                  <i class="fa-solid fa-check"></i>
+                  <p>로그인 정보 저장</p>
+                </label>
+              </div>
               <a href="#">도움이 필요하신가요?</a>
             </div>
           </section>
