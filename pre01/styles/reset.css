@@ -51,3 +51,7 @@ table {
 a{
 	text-decoration: none;
 }
+
+input, button {
+	border: none;
+}
