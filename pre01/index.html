@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="ko">
   <head>
-    <meta charset="utf-8" />
+    <meta charset=utf-8>
     <title>Netflix</title>
-    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
-    <link rel="stylesheet" href="./styles/reset.css" />
-    <link rel="stylesheet" href="./styles/styles.css" />
-    <script src="https://kit.fontawesome.com/f0d1e34829.js" crossorigin="anonymous"></script>
+    <link rel=icon type=image/x-icon href=images/favicon.ico>
+    <link rel=stylesheet href=./styles/reset.css>
+    <link rel=stylesheet href=./styles/styles.css>
+    <script src=https://kit.fontawesome.com/f0d1e34829.js crossorigin="anonymous"></script>
   </head>
   <body>
     <!-- top -->
@@ -16,30 +16,34 @@
       <!-- header -->
       <header>
         <a href="#">
-          <img src="images/logo.png" />
+          <img src=images/logo.png alt=netflixLogo>
         </a>
       </header>
 
       <!-- main -->
       <main>
-        <form action="">
+        <form action="submit">
           <h2>로그인</h2>
           <section class="input-container">
-            <label for="">
-              <input type="email" placeholder="이메일 주소 또는 전화번호">
-            </label>
-            <label for="">
-              <input type="password" placeholder="비밀번호">
-            </label>
+            <h3 class="a11y-hidden">input 입력</h3>
+            <div class="input-email">
+              <input id="userEmail" type="text" required>
+              <label class="user-email" for="userEmail">이메일 주소 또는 전화번호</label>
+            </div>
+            <div class="input-password">
+              <input id="userPassword" type="password" required>
+              <label class="user-password" for="userPassword">비밀번호</label>
+            </div>
           </section>
           <section class="login-container">
+            <h3 class="a11y-hidden">로그인 버튼</h3>
             <button>로그인</button>
             <div class="login-help">
               <div>
                 <input id="rememberUser" type="checkbox" checked>
                 <label for="rememberUser">
                   <i class="fa-solid fa-check"></i>
-                  <p>로그인 정보 저장</p>
+                  로그인 정보 저장
                 </label>
               </div>
               <a href="#">도움이 필요하신가요?</a>
@@ -48,11 +52,13 @@
         </form>
         <div class="other-container">
           <section class="signup-container">
+            <h3 class="a11y-hidden">가입하기</h3>
             Netfilx 회원이 아닌가요? &nbsp;
             <a href="#">지금 가입하세요</a>
             .
           </section>
           <section class="terms-of-use">
+            <h3 class="a11y-hidden">이용약관</h3>
             <span>이 페이지는 Google reCAPTCHA의 보호를 받아 사용자가 로봇이 아님을 확인합니다.</span>&nbsp;<a href="#">자세히 알아보기.</a>
           </section>
         </div>
@@ -64,9 +70,11 @@
       <!-- footer -->
       <footer>
         <section class="contact-number">
+          <h3 class="a11y-hidden">고객센터 전화번호 연결</h3>
           <span>질문이 있으신가요? 문의 전화:</span> <a>00-308-321-0161 (수신자 부담)</a>
         </section>
         <section class="links">
+          <h3 class="a11y-hidden">링크</h3>
           <ul>
             <li>
               <a href="">
@@ -101,10 +109,16 @@
           </ul>
         </section>
         <section class="language">
-          <label></label>
-          <select name="" id=""></select>
+          <h3 class="a11y-hidden">언어 선택</h3>
+          <label for="language-switcher">
+            <select id="language-switcher">
+              <option value="한국어">한국어</option>
+              <option value="English">English</option>
+            </select>
+          </label>
         </section>
         <section class="about-us">
+          <h3 class="a11y-hidden">회사 정보</h3>
           <p>넷플릭스서비시스코리아 유한회사 통신판매업신고번호: 제2018-서울종로-0426호 전화번호: 00-308-321-0161 (수신자 부담)</p>
           <p>대표: 레지널드 숀 톰프슨</p>
           <p>이메일 주소: korea@netflix.com</p>

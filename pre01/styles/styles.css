@@ -65,19 +65,50 @@ main form .input-container{
 }
 
 
-main form .input-container label{
-  
-}
+
+
 
 main form .input-container input{
   background-color: #333333;
   height: 50px;
-  padding-left: 20px;
+  padding: 0 20px;
   width: 100%;
   box-sizing: border-box;
   font-size: 16px;
   border-radius: 4px;
   border: none;
+}
+
+main form .input-container input:is(:focus, :valid){
+  padding: 16px 20px 0px;
+}
+
+.input-container .input-email,
+.input-container .input-password{
+  display: flex;
+  position: relative;
+}
+
+main form .input-container .input-email label,
+main form .input-container .input-password label{
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+}
+
+main form .input-container input:focus{
+  outline: none;
+  background-color: #555555;
+  color: #fff;
+  transition: all 0.1s;
+}
+
+main form .input-container input:is(:focus, :valid) ~ label {
+  top: 30%;
+  left: 56%;
+  font-size: 12px;
 }
 
 main form .login-container{
@@ -160,7 +191,7 @@ main form .login-container .login-help i{
 main form .login-container .login-help input:checked + label i{
   opacity: 1;
   z-index: 999;
-  transition: all 1s;
+  transition: all 0.1s;
 }
 
 main .other-container{
@@ -193,9 +224,7 @@ main .other-container .terms-of-use a{
 /* footer */
 .bottom-container{
   width: 100%;
-  /* height: 1000px; */
   background: rgba(0,0,0,.75);
-  box-shadow: 0 0 10px cornflowerblue;
   color: #737373;
   padding: 30px 0;
 }
@@ -203,6 +232,7 @@ main .other-container .terms-of-use a{
 footer {
   width: 90%;
   margin: 0 auto;
+  /* max-width: 1000px; */
 }
 
 footer .contact-number{
@@ -214,15 +244,34 @@ footer .links{
 }
 
 footer .links ul {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }
 
 footer .links ul li{
-  width: 25%;
+  margin-bottom: 16px;
+  padding: 0 22px 0 0;
 }
 
 footer .language{
   margin-top: 20px;
+  position: relative;
+  font-size: 13px;
+}
+
+footer .language select{
+  width: 120px;
+  height: 48px;
+  background-color: #000000;
+  color: #777;
+  padding-left: 35px;
+  padding-right: 26px;
+  border: 1px solid #333;
+  border-radius: 4px;
+  appearance: none;
+  -webkit-appearance:none; /* for chrome */
+  -moz-appearance:none; /*for firefox*/
+  z-index: 99;
 }
 
 footer .about-us{
