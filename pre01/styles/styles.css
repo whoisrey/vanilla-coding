@@ -1,19 +1,20 @@
 /* hidden */
 .a11y-hidden {
+  overflow: hidden;
   position: absolute;
   width: 1px;
   height: 1px;
-  overflow: hidden;
   margin: -1px;
   clip-path: polygon(0 0, 0 0, 0 0);
 }
 
-.top-container {
-  margin-left: 3%;
+/* common */
+body {
+  background-image : linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(../images/bg.jpg);
 }
 
-body {
-  background-image : linear-gradient( rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(../images/bg.jpg);
+a:hover{
+  text-decoration: underline;
 }
 
 /* header */
@@ -21,30 +22,26 @@ header {
   display: flex;
   align-items: center;
   height: 90px;
+  margin-left: 3%;
 }
 
-header a{
+header a img {
   width: 167px;
   height: 45px;
-}
-
-header img {
-  width: 100%;
 }
 
 /* main */
 main {
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
-  margin-bottom: 90px;
-  padding: 60px 68px 40px;
   width: 450px;
   min-height: 660px;
-  color: #fff;
-  box-sizing: border-box;
-  background-color: rgba(0,0,0,.75);
+  margin: 0 auto 90px;
+  padding: 60px 68px 40px;
   border-radius: 4px;
+  box-sizing: border-box;
+  background: rgba(0,0,0,.75);
+  color: #fff;
 }
 
 main form {
@@ -52,11 +49,12 @@ main form {
 }
 
 main form h2 {
+  margin-bottom: 28px;
   font-size: 32px;
-  margin: 0 0 28px 0;
 }
 
-main form .input-container{
+/* input-container */
+.input-container{
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -64,121 +62,107 @@ main form .input-container{
   color: #8C8C8C;
 }
 
-
-
-
-
-main form .input-container input{
-  background-color: #333333;
+.input-container input{
+  width: 100%;
   height: 50px;
   padding: 0 20px;
-  width: 100%;
-  box-sizing: border-box;
-  font-size: 16px;
-  border-radius: 4px;
   border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background: #333333;
 }
 
-main form .input-container input:is(:focus, :valid){
-  padding: 16px 20px 0px;
-}
-
-.input-container .input-email,
-.input-container .input-password{
-  display: flex;
-  position: relative;
-}
-
-main form .input-container .input-email label,
-main form .input-container .input-password label{
-  position: absolute;
-  width: 100%;
-  top: 50%;
-  left: 55%;
-  transform: translate(-50%, -50%);
-}
-
-main form .input-container input:focus{
+.input-container input:focus{
   outline: none;
-  background-color: #555555;
+  background: #555555;
   color: #fff;
   transition: all 0.1s;
 }
 
-main form .input-container input:is(:focus, :valid) ~ label {
+.input-container input:is(:focus, :valid){
+  padding: 16px 20px 0px;
+}
+
+.input-container input:is(:focus, :valid) ~ label {
   top: 30%;
   left: 56%;
   font-size: 12px;
 }
 
-main form .login-container{
+.input-container div{
+  display: flex;
+  position: relative;
+}
+
+.input-container div label{
+  position: absolute;
+  top: 50%;
+  left: 55%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+}
+
+/* login-container */
+.login-container{
   color: #b3b3b3;
 }
 
-main form .login-container button{
+.login-container button{
   margin: 24px 0 12px;
   padding: 16px;
   width: 100%;
   height: 48px;
   border-radius: 4px;
-  background-color: #e50914;
+  background: #e50914;
   color: #fff;
+  cursor: pointer;
 }
 
-main form .login-container .login-help{
+.login-container .button-bottom{
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 20px;
+  margin-top: 2px;
   font-size: 13px;
-  padding: 2px 0 0 ;
 }
 
-main form .login-container .login-help div{
+.login-container .button-bottom .login-help{
   display: flex;
-  flex-grow: 1;
   padding-left: 20px;
 }
 
-main form .login-container .login-help div input{
-  position: absolute;
-  left: 0;
-  top: 0;
-  opacity: 0;
+/* rememberUserInfo checkbox */
+.login-container .button-bottom .login-help input{
+  width: 0;
 }
 
-main form .login-container .login-help label {
+.login-container .button-bottom .login-help label {
   position: relative;
-  padding: 0;
 }
 
-main form .login-container .login-help label::before{
+.login-container .button-bottom .login-help label::before,
+.login-container .button-bottom .login-help label::after{
   content: "";
   display: block;
   position: absolute;
   top: -3px;
+  left: -20px;
+  width: 16px;
+  height: 16px;
+  border: 0;
+  border-radius: 2px;
+}
+
+.login-container .button-bottom .login-help label::before{
   background: #737373;
-  border: 0;
-  border-radius: 2px;
-  height: 16px;
-  left: -20px;
-  width: 16px;
 }
 
-main form .login-container .login-help input:hover + label::after{
-  content: "";
-  display: block;
-  position: absolute;
-  top: -3px;
+.login-container .button-bottom .login-help input:focus + label::after{
   background: #fff;
-  border: 0;
-  border-radius: 2px;
-  height: 16px;
-  left: -20px;
-  width: 16px;
 }
 
-main form .login-container .login-help i{
+.login-container .button-bottom .login-help label i{
   position: absolute;
   top: 0%;
   left: -20%;
@@ -187,98 +171,111 @@ main form .login-container .login-help i{
   opacity: 0;
 }
 
-
-main form .login-container .login-help input:checked + label i{
+.login-container .button-bottom input:checked + label i{
   opacity: 1;
   z-index: 999;
   transition: all 0.1s;
 }
 
-main .other-container{
+/* other-container */
+.other-container{
   height: 161px;
 }
 
-
-main .other-container .signup-container{
+.other-container .signup-container{
   display: flex;
   margin-top: 16px;
   color: #737373;
   font-weight: 400;
 }
 
-main .other-container .signup-container a{
+.other-container .signup-container a{
   color: #fff;
 }
 
-main .other-container .terms-of-use{
+.other-container .terms-of-use{
   margin: 13px 0;
   font-size: 13px;
   line-height: 17px;
   color: #8C8C8C;
 }
 
-main .other-container .terms-of-use a{
+.other-container .terms-of-use a{
   color: #0071eb;
 }
 
 /* footer */
-.bottom-container{
+footer {
   width: 100%;
   background: rgba(0,0,0,.75);
   color: #737373;
+}
+
+footer .footer-container{
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
   padding: 30px 0;
 }
 
-footer {
-  width: 90%;
-  margin: 0 auto;
-  /* max-width: 1000px; */
-}
-
-footer .contact-number{
+/* contact-number */
+.contact-number{
   margin-bottom: 30px;
 }
 
-footer .links{
+/* links */
+.links{
   font-size: 13px;
 }
 
-footer .links ul {
+.links ul {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 }
 
-footer .links ul li{
+.links ul li{
   margin-bottom: 16px;
-  padding: 0 22px 0 0;
 }
 
-footer .language{
-  margin-top: 20px;
+/* language */
+.language{
   position: relative;
+  margin-top: 20px;
   font-size: 13px;
 }
 
-footer .language select{
+.language label{
+  position: relative;
   width: 120px;
   height: 48px;
-  background-color: #000000;
-  color: #777;
-  padding-left: 35px;
-  padding-right: 26px;
+}
+
+.language label .globe{
+  position: absolute;
+  top: 43%;
+  left: 15%;
+  transform: translate(-50%, -50%);
+  width: 16px;
+  height: 16px;
+}
+
+.language select{
+  width: 120px;
+  height: 48px;
+  padding: 0 26px 0 28px;
   border: 1px solid #333;
-  border-radius: 4px;
-  appearance: none;
-  -webkit-appearance:none; /* for chrome */
-  -moz-appearance:none; /*for firefox*/
+  border-radius: 2px;
+  background: #000;
+  color: #777;
   z-index: 99;
 }
 
-footer .about-us{
+/* about-us */
+.about-us{
   display: flex;
   flex-direction: column;
   gap: 4px;
-  font-size: 12px;
-  color: #808080;
   margin: 20px 0;
+  color: #808080;
+  font-size: 12px;
 }

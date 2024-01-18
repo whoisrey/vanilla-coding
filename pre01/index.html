@@ -9,14 +9,13 @@
     <script src=https://kit.fontawesome.com/f0d1e34829.js crossorigin="anonymous"></script>
   </head>
   <body>
-    <!-- top -->
-    <div class="top-container">
-      <h1 class="a11y-hidden">넷플릭스 로그인 화면</h1>
+      <h1 class="a11y-hidden">넷플릭스 과제</h1>
 
       <!-- header -->
       <header>
+        <h2 class="a11y-hidden">넷플릭스 로고</h2>
         <a href="#">
-          <img src=images/logo.png alt=netflixLogo>
+          <img src=images/logo.png alt="로고">
         </a>
       </header>
 
@@ -25,7 +24,7 @@
         <form action="submit">
           <h2>로그인</h2>
           <section class="input-container">
-            <h3 class="a11y-hidden">input 입력</h3>
+            <h3 class="a11y-hidden">사용자 로그인 정보 입력</h3>
             <div class="input-email">
               <input id="userEmail" type="text" required>
               <label class="user-email" for="userEmail">이메일 주소 또는 전화번호</label>
@@ -36,12 +35,12 @@
             </div>
           </section>
           <section class="login-container">
-            <h3 class="a11y-hidden">로그인 버튼</h3>
+            <h3 class="a11y-hidden">로그인 버튼 및 정보 저장</h3>
             <button>로그인</button>
-            <div class="login-help">
-              <div>
-                <input id="rememberUser" type="checkbox" checked>
-                <label for="rememberUser">
+            <div class="button-bottom">
+              <div class="login-help">
+                <input id="rememberUserInfo" type="checkbox" checked>
+                <label for="rememberUserInfo">
                   <i class="fa-solid fa-check"></i>
                   로그인 정보 저장
                 </label>
@@ -51,83 +50,85 @@
           </section>
         </form>
         <div class="other-container">
+          <h2 class="a11y-hidden">회원가입</h2>
           <section class="signup-container">
-            <h3 class="a11y-hidden">가입하기</h3>
+            <h3 class="a11y-hidden">회원가입 및 Google reCAPTCHA</h3>
             Netfilx 회원이 아닌가요? &nbsp;
             <a href="#">지금 가입하세요</a>
             .
           </section>
           <section class="terms-of-use">
-            <h3 class="a11y-hidden">이용약관</h3>
+            <h3 class="a11y-hidden">사용자 이용약관</h3>
             <span>이 페이지는 Google reCAPTCHA의 보호를 받아 사용자가 로봇이 아님을 확인합니다.</span>&nbsp;<a href="#">자세히 알아보기.</a>
           </section>
         </div>
       </main>
-    </div>
 
-    <!-- bottom -->
-    <div class="bottom-container">
       <!-- footer -->
       <footer>
-        <section class="contact-number">
-          <h3 class="a11y-hidden">고객센터 전화번호 연결</h3>
-          <span>질문이 있으신가요? 문의 전화:</span> <a>00-308-321-0161 (수신자 부담)</a>
-        </section>
-        <section class="links">
-          <h3 class="a11y-hidden">링크</h3>
+        <div class="footer-container">
+          <h2 class="a11y-hidden">고객 서비스 관련</h2>
+          <section class="contact-number">
+            <h3 class="a11y-hidden">고객센터 전화연결</h3>
+            <span>질문이 있으신가요? 문의 전화:</span> <a href="tel:00-308-321-0161">00-308-321-0161 (수신자 부담)</a>
+          </section>
+          <section class="links">
+          <h3 class="a11y-hidden">사이트 관련 링크 모음</h3>
           <ul>
             <li>
-              <a href="">
+              <a href="#">
                 자주 묻는 질문
               </a>
             </li>
             <li>
-              <a href="">
+              <a href="#">
                 고객 센터
               </a>
             </li>
             <li>
-              <a href="">
+              <a href="#">
                 이용 약관
               </a>
             </li>
             <li>
-              <a href="">
+              <a href="#">
                 개인정보 처리방침
               </a>
             </li>
             <li>
-              <a href="">
+              <a href="#">
                 쿠키 설정
               </a>
             </li>
             <li>
-              <a href="">
+              <a href="#">
                 회사 정보
               </a>
             </li>
           </ul>
-        </section>
-        <section class="language">
-          <h3 class="a11y-hidden">언어 선택</h3>
-          <label for="language-switcher">
-            <select id="language-switcher">
-              <option value="한국어">한국어</option>
-              <option value="English">English</option>
-            </select>
-          </label>
-        </section>
-        <section class="about-us">
-          <h3 class="a11y-hidden">회사 정보</h3>
-          <p>넷플릭스서비시스코리아 유한회사 통신판매업신고번호: 제2018-서울종로-0426호 전화번호: 00-308-321-0161 (수신자 부담)</p>
-          <p>대표: 레지널드 숀 톰프슨</p>
-          <p>이메일 주소: korea@netflix.com</p>
-          <p>주소: 대한민국 서울특별시 종로구 우정국로 26, 센트로폴리스 A동 20층 우편번호 03161</p>
-          <p>사업자등록번호: 165-87-00119</p>
-          <p>클라우드 호스팅: Amazon Web Services Inc.</p>
-          <p>공정거래위원회 웹사이트</p>
-        </section>
+          </section>
+          <section class="language">
+            <h3 class="a11y-hidden">언어 선택</h3>
+            <label for="language-switcher">
+              <img src="./images/globe.png" class="globe" alt="언어 바꾸기">
+                <select id="language-switcher">
+                  <option value="ko">한국어</option>
+                  <option value="en">English</option>
+                </select>
+            </label>
+          </section>
+          <section class="about-us">
+            <h3 class="a11y-hidden">회사 상세정보</h3>
+            <p>넷플릭스서비시스코리아 유한회사 통신판매업신고번호: 제2018-서울종로-0426호 전화번호: 00-308-321-0161 (수신자 부담)</p>
+            <p>대표: 레지널드 숀 톰프슨</p>
+            <p>이메일 주소: korea@netflix.com</p>
+            <p>주소: 대한민국 서울특별시 종로구 우정국로 26, 센트로폴리스 A동 20층 우편번호 03161</p>
+            <p>사업자등록번호: 165-87-00119</p>
+            <p>클라우드 호스팅: Amazon Web Services Inc.</p>
+            <a href="http://www.ftc.go.kr/bizCommPop.do?wrkrno=1658700119">공정거래위원회 웹사이트</a>
+          </section>
+        </div>
       </footer>
-    </div>
+
   </body>
 </html>
