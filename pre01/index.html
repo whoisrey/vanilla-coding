@@ -9,7 +9,7 @@
     <script src=https://kit.fontawesome.com/f0d1e34829.js crossorigin="anonymous"></script>
   </head>
   <body>
-      <h1 class="a11y-hidden">넷플릭스 과제</h1>
+      <h1 class="a11y-hidden">바닐라코딩 프리코스 1주차 과제 (이양래)</h1>
 
       <!-- header -->
       <header>
@@ -21,46 +21,48 @@
 
       <!-- main -->
       <main>
-        <form action="submit">
-          <h2>로그인</h2>
-          <section class="input-container">
-            <h3 class="a11y-hidden">사용자 로그인 정보 입력</h3>
-            <div class="input-email">
-              <input id="userEmail" type="text" required>
-              <label class="user-email" for="userEmail">이메일 주소 또는 전화번호</label>
-            </div>
-            <div class="input-password">
-              <input id="userPassword" type="password" required>
-              <label class="user-password" for="userPassword">비밀번호</label>
-            </div>
-          </section>
-          <section class="login-container">
-            <h3 class="a11y-hidden">로그인 버튼 및 정보 저장</h3>
-            <button>로그인</button>
-            <div class="button-bottom">
-              <div class="login-help">
-                <input id="rememberUserInfo" type="checkbox" checked>
-                <label for="rememberUserInfo">
-                  <i class="fa-solid fa-check"></i>
-                  로그인 정보 저장
-                </label>
+        <div class="main-container">
+          <form action="submit">
+            <h2>로그인</h2>
+            <section class="input-container">
+              <h3 class="a11y-hidden">사용자 로그인 정보 입력</h3>
+              <div class="input-email">
+                <input id="userEmail" type="text" required>
+                <label class="user-email" for="userEmail">이메일 주소 또는 전화번호</label>
               </div>
-              <a href="#">도움이 필요하신가요?</a>
-            </div>
-          </section>
-        </form>
-        <div class="other-container">
-          <h2 class="a11y-hidden">회원가입</h2>
-          <section class="signup-container">
-            <h3 class="a11y-hidden">회원가입 및 Google reCAPTCHA</h3>
-            Netfilx 회원이 아닌가요? &nbsp;
-            <a href="#">지금 가입하세요</a>
-            .
-          </section>
-          <section class="terms-of-use">
-            <h3 class="a11y-hidden">사용자 이용약관</h3>
-            <span>이 페이지는 Google reCAPTCHA의 보호를 받아 사용자가 로봇이 아님을 확인합니다.</span>&nbsp;<a href="#">자세히 알아보기.</a>
-          </section>
+              <div class="input-password">
+                <input id="userPassword" type="password" required>
+                <label class="user-password" for="userPassword">비밀번호</label>
+              </div>
+            </section>
+            <section class="login-container">
+              <h3 class="a11y-hidden">로그인 버튼 및 정보 저장</h3>
+              <button>로그인</button>
+              <div class="button-bottom">
+                <div class="login-help">
+                  <input id="rememberUserInfo" type="checkbox" checked>
+                  <label for="rememberUserInfo">
+                    <i class="fa-solid fa-check"></i>
+                    로그인 정보 저장
+                  </label>
+                </div>
+                <a href="#">도움이 필요하신가요?</a>
+              </div>
+            </section>
+          </form>
+          <div class="other-container">
+            <h2 class="a11y-hidden">회원가입</h2>
+            <section class="signup-container">
+              <h3 class="a11y-hidden">회원가입 및 Google reCAPTCHA</h3>
+              Netfilx 회원이 아닌가요? &nbsp;
+              <a href="#">지금 가입하세요</a>
+              .
+            </section>
+            <section class="terms-of-use">
+              <h3 class="a11y-hidden">사용자 이용약관</h3>
+              <span>이 페이지는 Google reCAPTCHA의 보호를 받아 사용자가 로봇이 아님을 확인합니다.</span>&nbsp;<a href="#">자세히 알아보기.</a>
+            </section>
+          </div>
         </div>
       </main>
 
