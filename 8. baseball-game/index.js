@@ -55,6 +55,8 @@ function compareNum(first, second) {
 function init() {
   startGame();
   opportunity.innerText = 10;
+  strike.innerText = 0;
+  ball.innerText = 0;
   input.value = "";
 }
 
