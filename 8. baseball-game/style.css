@@ -22,6 +22,10 @@ h1 {
   width: 100%;
 }
 
+.random-number {
+  display: none;
+}
+
 .container {
   display: none;
 }
