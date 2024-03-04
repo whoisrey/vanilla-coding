@@ -21,3 +21,7 @@ h1 {
   padding: 0;
   width: 100%;
 }
+
+.container {
+  display: none;
+}
