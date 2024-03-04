@@ -21,7 +21,7 @@
       <div class="image-box">
         <img src="images/vanilla_coding_logo.png" />
       </div>
-      <h1>Baseball</h1>
+      <h1>⚾️ Baseball ⚾️</h1>
 
       <!-- 야구게임 Start -->
       <button class="start-btn">Start</button>
@@ -30,21 +30,23 @@
       </div>
       <div class="container">
         <form action="">
-          <label for=""></label>
-          <input type="number">
+          <input id="num" type="text" maxlength="3" placeholder="Number" required>
+          <label for="num"></label>
         </form>
-        <div>
-          <span>Strike :</span>
-          <span id="strike">0</span>
-        </div>
-        <div>
-          <span>Ball :</span>
-          <span id="ball">0</span>
-        </div>
-        <div>
-          <span>Opportunity : </span>
-          <span id="opportunity">10</span>
-        </div>
+        <table>
+          <tr>
+            <td>Strike</td>
+            <td id="strike">0</td>
+          </tr>
+          <tr>
+            <td>Ball</td>
+            <td id="ball">0</td>
+          </tr>
+          <tr>
+            <td>Opportunity</td>
+            <td id="opportunity">10</td>
+          </tr>
+        </table>
         <button class="restart-btn">
           Restart
         </button>

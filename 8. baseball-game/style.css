@@ -1,8 +1,12 @@
 body {
-  background-image: url("./images/bg.jpeg");
+  background-image: url("./images/home.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   font-family: "Varela Round", sans-serif;
+}
+
+.image-box img{
+  width: 200px;
 }
 
 h1 {
@@ -11,15 +15,21 @@ h1 {
   font-size: 72px;
 }
 
+section {
+  display: flex;
+  flex-direction: column;
+}
+
 .start-btn {
+  cursor: pointer;
   font-family: "Pacifico", cursive;
-  text-align: center;
   font-size: 72px;
   color: red;
   background: none;
   border: none;
   padding: 0;
-  width: 100%;
+  width: 200px;
+  margin: 0 auto;
 }
 
 .random-number {
@@ -28,4 +38,51 @@ h1 {
 
 .container {
   display: none;
+  flex-direction: column;
+  width: 200px;
+  gap: 20px;
+  color: #fff;
+}
+
+.container form {
+  margin: 0 auto;
+}
+
+.container input {
+  position: relative;
+  background: none;
+  border: none;
+  border-bottom: 2px solid #fff;
+  color: #fff;
+  text-align: center;
+}
+
+.container input::placeholder{
+  color: #fff;
+}
+
+.container input:focus{
+  outline: none;
+}
+
+input:focus {
+  font-size: 20px;
+  transition: 0.5s ease;
+  border-bottom: 4px solid #dbd4d4;
+}
+
+
+table {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.restart-btn{
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: "Pacifico", cursive;
+  font-size: 20px;
+  color: #fff;
 }
