@@ -1,9 +1,14 @@
 const startBtn = document.querySelector(".start-btn");
 const container = document.querySelector(".container");
 const randomNum = document.querySelector(".random-number");
+const restartBtn = document.querySelector(".restart-btn");
 
 const form = document.querySelector("form");
 const input = document.querySelector("input");
+
+const strike = document.getElementById("strike");
+const ball = document.getElementById("ball");
+const opportunity = document.getElementById("opportunity");
 
 function makeRandomNum() {
   const num = [1, 2, 3, 4, 5, 6, 7, 8, 9];
@@ -41,22 +46,36 @@ function compareNum(first, second) {
       }
     }
   }
+  strike.innerText = strikes;
+  ball.innerText = balls;
   console.log(strikes);
   console.log(balls);
-  strikes = 0;
-  balls = 0;
 }
+
+function init() {
+  startGame();
+  opportunity.innerText = 10;
+  input.value = "";
+}
+
 startBtn.addEventListener("click", startGame);
 
 form.addEventListener("submit", function (e) {
   e.preventDefault();
   let userNum = input.value;
   const computerNum = randomNum.innerText;
-  if (100 < userNum && userNum < 1000) {
-    console.log(userNum);
-    console.log(computerNum);
-    compareNum(userNum, computerNum);
+  if (opportunity.innerText === "0") {
+    alert("Game Over");
   } else {
-    alert("세 자리 숫자를 입력하시오.");
+    if (100 < userNum && userNum < 1000) {
+      console.log(userNum);
+      console.log(computerNum);
+      compareNum(userNum, computerNum);
+      opportunity.innerText--;
+    } else {
+      alert("세 자리 숫자를 입력하시오.");
+    }
   }
 });
+
+restartBtn.addEventListener("click", init);
