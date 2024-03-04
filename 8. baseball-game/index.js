@@ -24,7 +24,7 @@ function makeRandomNum() {
 }
 
 function startGame() {
-  container.style.display = "block";
+  container.style.display = "flex";
   makeRandomNum();
 }
 
@@ -67,7 +67,11 @@ form.addEventListener("submit", function (e) {
   let userNum = input.value;
   const computerNum = randomNum.innerText;
   if (opportunity.innerText === "0") {
-    alert("Game Over");
+    alert("💀Game Over💀");
+    init();
+  } else if (userNum === computerNum) {
+    alert("🎉Congratulation!🎉");
+    init();
   } else {
     if (100 < userNum && userNum < 1000) {
       console.log(userNum);
@@ -78,6 +82,7 @@ form.addEventListener("submit", function (e) {
       alert("세 자리 숫자를 입력하시오.");
     }
   }
+  input.value = "";
 });
 
 restartBtn.addEventListener("click", init);
