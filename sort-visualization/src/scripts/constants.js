@@ -1,0 +1,11 @@
+export const AVAILABLE_SORTING_ALGORITHMS = {
+  BUBBLE: "BUBBLE",
+  QUICK: "QUICK",
+  INSERTION: "INSERTION",
+  MERGE: "MERGE",
+};
+
+export const MAX_INPUTS_NUMBER = 10;
+export const MAX_RANGE_NUMBER = 20;
+export const MIN_RANGE_NUMBER = 1;
+export const MIN_INPUT_NUMBER = 5;

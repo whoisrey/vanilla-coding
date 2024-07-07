@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+10&family=Jersey+10+Charted&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/assets/vaco_symbol.png" />
+    <title>Sorting Algorithms Visualizer</title>
+  </head>
+  <body>
+    <header>
+      <h1>Sorting Algorithms Visualizer</h1>
+    </header>
+    <main>
+      <h2>Sort</h2>
+      <section class="user-section">
+        <form class="form-container">
+          <h3>Input ▾</h3>
+          <div class="input-container">
+            <label for="userInput"></label>
+            <input type="text" id="userInput" name="numbers" autocomplete="off"  />
+            <p>Please press<br>
+              Enter.</p>
+          </div>
+          <div class="error-message"></div>
+        </form>
+        <article class="input-manual">
+          <h3>Manual</h3>
+          <p>1. Please enter only integers.</p>
+          <p>2. Please enter non-duplicated inputs.</p>
+          <p>3. Please enter 5 between 10 inputs.</p>
+          <p>4. The Range of Input: 1 ~ 20</p>
+        </article>
+      </section>
+      <section class="visualization-section">
+        <div class="sorting-area">
+        </div>
+        <div class="sorting-tools">
+          <ul class="sorting-legend">
+            <li class="sorting-legend-pivot">
+              <span>Pivot</span>
+            </li>
+            <li class="sorting-legend-left">
+              <span>Left</span>
+            </li>
+            <li class="sorting-legend-right">
+              <span>Right</span>
+            </li>
+            <li class="sorting-legend-both">
+              <span>Both(Left & Right)</span>
+            </li>
+          </ul>
+          <select class="select-box">
+          </select>
+          <button class="sorting-button">Sort</button>
+        </div>
+      </section>
+    </main>
+    <script defer type="module" src="./src/scripts/index.js"></script>
+  </body>
+</html>
