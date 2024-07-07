@@ -1,0 +1,352 @@
+{
+  "kind": "youtube#searchListResponse",
+  "etag": "qqB1-nxTL-LHUerjIAACGI5FNfA",
+  "nextPageToken": "CAoQAA",
+  "regionCode": "KR",
+  "pageInfo": {
+    "totalResults": 71364,
+    "resultsPerPage": 10
+  },
+  "items": [
+    {
+      "kind": "youtube#searchResult",
+      "etag": "_0bzw3OZELwfs51gDjMXbDxhRQA",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "NiEWLzF8US4"
+      },
+      "snippet": {
+        "publishedAt": "2022-07-26T02:47:29Z",
+        "channelId": "UCqw3KRd7EBORZPqpxU4XLEA",
+        "title": "바닐라코딩 부트캠프의 마지막 피날레, ‘스탠드업‘이란 무엇일까?",
+        "description": "바닐라코딩 부트캠프의 마지막 피날레, '스탠드업'은 바코더들의 마지막 솔로 프로젝트를 세상에 알리는 이벤트로 부트캠프의 마지막 ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/NiEWLzF8US4/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/NiEWLzF8US4/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/NiEWLzF8US4/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "바닐라코딩",
+        "liveBroadcastContent": "none",
+        "publishTime": "2022-07-26T02:47:29Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "d6ku8W1q7MfQ4nE9MKmu3IJCtZI",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "dTFjQ8IDwvA"
+      },
+      "snippet": {
+        "publishedAt": "2023-11-27T09:01:40Z",
+        "channelId": "UCqw3KRd7EBORZPqpxU4XLEA",
+        "title": "바닐라코딩 부트캠프 15기의 솔로 프로젝트 | SOLO PROJECT - 15TH BOOTCAMP",
+        "description": "바닐라코딩 #코딩 #부트캠프 #개발자 #프로젝트 바닐라코딩 부트캠프와 함께한 여정의 끝에 이제는 한 사람의 개발자로서 첫발을 ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/dTFjQ8IDwvA/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/dTFjQ8IDwvA/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/dTFjQ8IDwvA/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "바닐라코딩",
+        "liveBroadcastContent": "none",
+        "publishTime": "2023-11-27T09:01:40Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "oP5Fx6V1gEyJwKU_1e7udfJtc1I",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "rf-3_uvvoUU"
+      },
+      "snippet": {
+        "publishedAt": "2022-04-14T03:00:07Z",
+        "channelId": "UCqw3KRd7EBORZPqpxU4XLEA",
+        "title": "바닐라코딩 부트캠프 11기: 쉼표 by 신요한.",
+        "description": "바닐라코딩 부트캠프 11기의 파이널 프로젝트, 'STAND UP EVENT'를 즐겨보세요. 읽었던 책들을 기록하고 감상평을 공유할 수 ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/rf-3_uvvoUU/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/rf-3_uvvoUU/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/rf-3_uvvoUU/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "바닐라코딩",
+        "liveBroadcastContent": "none",
+        "publishTime": "2022-04-14T03:00:07Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "iPpZxTBS9Wc-iJ-5PMJHJmkYN3E",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "y95am9VALBQ"
+      },
+      "snippet": {
+        "publishedAt": "2021-02-26T07:44:06Z",
+        "channelId": "UCqw3KRd7EBORZPqpxU4XLEA",
+        "title": "[인터뷰] 이제는 말할 수 있다! 바닐라코딩 부트캠프 8기 첫 취업 성공 인터뷰.🎙",
+        "description": "안녕하세요 여러분, 바닐라코딩입니다! 작년 부트캠프 8기를 무사히 수료 후, 올해 초 가장 먼저 취업 성공의 신호탄을 알린, 8기 ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/y95am9VALBQ/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/y95am9VALBQ/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/y95am9VALBQ/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "바닐라코딩",
+        "liveBroadcastContent": "none",
+        "publishTime": "2021-02-26T07:44:06Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "QjBvN9hgMjokJ5IPsubEnfCX3ro",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "wt0-gsG7y0o"
+      },
+      "snippet": {
+        "publishedAt": "2024-02-11T01:00:23Z",
+        "channelId": "UCqw3KRd7EBORZPqpxU4XLEA",
+        "title": "게임 프로젝트 🎲 자바스크립트로 이 정도 게임을 만드는게 가능하다니! | 바닐라코딩 부트캠프",
+        "description": "[프로젝트 발표] 3년 전, 바닐라코딩 부트캠프 9기의 솔로 프로젝트 중 몇 가지를 공유합니다. 소스 코드가 궁금하신 분들은 아래 ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/wt0-gsG7y0o/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/wt0-gsG7y0o/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/wt0-gsG7y0o/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "바닐라코딩",
+        "liveBroadcastContent": "none",
+        "publishTime": "2024-02-11T01:00:23Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "KXQ10f0IKH--Hv51tvGzRg--6wM",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "2CIAJUHO8mg"
+      },
+      "snippet": {
+        "publishedAt": "2024-01-17T18:32:57Z",
+        "channelId": "UCqw3KRd7EBORZPqpxU4XLEA",
+        "title": "💎[놀람주의] 인셉션 보신 분들 꼭 보세요. 진짜 신기한 3D 웹 프로젝트 👀 | 바닐라코딩 부트캠프",
+        "description": "[프로젝트 발표] 바닐라코딩 부트캠프 14기의 팀 프로젝트를 공유합니다. 소스 코드가 궁금하신 분들은 아래 바닐라코딩 메일링 ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/2CIAJUHO8mg/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/2CIAJUHO8mg/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/2CIAJUHO8mg/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "바닐라코딩",
+        "liveBroadcastContent": "none",
+        "publishTime": "2024-01-17T18:32:57Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "GfpfcHx8Ap3pL4qzTOuuaVAxvTw",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "BO-H3ugMDYo"
+      },
+      "snippet": {
+        "publishedAt": "2022-04-22T11:01:54Z",
+        "channelId": "UCqw3KRd7EBORZPqpxU4XLEA",
+        "title": "바닐라코딩 부트캠프 11기: PROGRAM 101 by 최민지.",
+        "description": "바닐라코딩 부트캠프 11기의 파이널 프로젝트, 'STAND UP EVENT'를 즐겨보세요. Redux를 시각화하여 누구나 쉽게 이해할 수 ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/BO-H3ugMDYo/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/BO-H3ugMDYo/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/BO-H3ugMDYo/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "바닐라코딩",
+        "liveBroadcastContent": "none",
+        "publishTime": "2022-04-22T11:01:54Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "Xf26gb93P_DLhnicY3ADYQKhdyQ",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "cRa9xPBek7Q"
+      },
+      "snippet": {
+        "publishedAt": "2021-03-08T01:00:14Z",
+        "channelId": "UCblVwq9CSRpO67Qv5o1gH7g",
+        "title": "🧑\u200d💻 비전공 출신, 취업을 위한 개발자 부트캠프 정말 좋을까?! (바닐라코딩 부트캠프)",
+        "description": "비전공자로서 프로그래밍을 배우기 위해 부트캠프를 찾는 분들을 위해 준비해봤습니다! 비전공자 개발 스터디로그, 스타트업 브이 ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/cRa9xPBek7Q/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/cRa9xPBek7Q/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/cRa9xPBek7Q/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "헬로 헤이든 Hayden",
+        "liveBroadcastContent": "none",
+        "publishTime": "2021-03-08T01:00:14Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "ENj3KmIfz0NIpk5T3eAQXH4xQ1E",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "TyVkREr9BvQ"
+      },
+      "snippet": {
+        "publishedAt": "2022-04-22T10:55:27Z",
+        "channelId": "UCqw3KRd7EBORZPqpxU4XLEA",
+        "title": "바닐라코딩 부트캠프 11기: 무지개 편지 by 노영진.",
+        "description": "바닐라코딩 부트캠프 11기의 파이널 프로젝트, 'STAND UP EVENT'를 즐겨보세요. 소중한 사람을 잃은 아픔을 극복할 수 있도록 ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/TyVkREr9BvQ/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/TyVkREr9BvQ/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/TyVkREr9BvQ/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "바닐라코딩",
+        "liveBroadcastContent": "none",
+        "publishTime": "2022-04-22T10:55:27Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "abcWVn6JngSjWmKtYNsEK1pNDOs",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "agbjoc2xsdQ"
+      },
+      "snippet": {
+        "publishedAt": "2024-01-05T12:15:00Z",
+        "channelId": "UCqw3KRd7EBORZPqpxU4XLEA",
+        "title": "30만 유튜버 되기 vs 당근마켓 개발자되기 | VACO:LATTE - 5기 김승욱 박종렬편",
+        "description": "라떼는…코테보다…기절하고…그랬다!     바닐라코딩 찐찐 고인물 등장⭐️ 부트캠프 5기 김승욱(당근마켓 프론트엔드)과 박종렬( ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/agbjoc2xsdQ/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/agbjoc2xsdQ/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/agbjoc2xsdQ/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "바닐라코딩",
+        "liveBroadcastContent": "none",
+        "publishTime": "2024-01-05T12:15:00Z"
+      }
+    }
+  ]
+}
