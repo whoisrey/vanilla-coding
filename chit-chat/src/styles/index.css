@@ -1,0 +1,287 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css");
+
+.a11y-hidden{
+  overflow: hidden;
+  position: absolute;
+  clip: rect(0 0 0 0); /* IE 6,7 */
+  clip: rect(0,0,0,0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding:0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-family: "East Sea Dokdo", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #2B2D31;
+}
+
+button {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  background: #383a41;
+  color: #B5BAC1;
+  font-family: inherit;
+  font-size: 20px;
+  width: 50px;
+}
+
+button:hover {
+  box-shadow: 3px 6px rgb(85, 21, 21);
+  transition: all 1s ease;
+  color: rgb(249, 247, 247);
+}
+
+input {
+  width: 100%;
+  height: 40px;
+  box-sizing: border-box;
+  background-color: transparent;
+  color: #B5BAC1;
+  border: none;
+  border-top: 1px dashed rgb(69, 69, 69);
+  padding-left: 5px;
+  font-family: "East Sea Dokdo", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+input:hover {
+  outline: none;
+  transition: all 0.5s ease;
+}
+
+input:focus {
+  outline: none;
+}
+
+
+#vaco {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 100px;
+}
+
+main {
+  border: 1px solid black;
+  width: 420px;
+  height: 800px;
+  background-color: #313338;
+  color: #B5BAC1;
+}
+
+.login-window {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+}
+
+.login-window .chat-title {
+  position: absolute;
+  top: -500%;
+  font-family: "Dokdo", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 35px;
+  color: red;
+  opacity: 0.2;
+  width: 100%;
+}
+
+.chat-title:hover {
+  transition: 2s ease;
+  opacity: 1;
+  color: red;
+  text-shadow:
+  4px 4px 1px #300000,
+  4px 6px 1px #400000,
+  4px 8px 1px #500000,
+  4px 10px 1px #600000,
+  4px 12px 1px #700000,
+  4px 14px 1px #800000,
+  4px 16px 1px #900000,
+  4px 18px 1px #A00000,
+  4px 20px 1px #B00000,
+  4px 22px 1px #C00000,
+  4px 24px 1px #D00000,
+  4px 26px 1px #E00000,
+  4px 28px 1px #F00000,
+  4px 30px 1px #FA0000,
+  4px 32px 1px #FB0000,
+  4px 34px 1px #FC0000,
+  4px 36px 1px #FD0000,
+  4px 38px 1px #FE0000,
+  4px 40px 2px #FF0000;
+}
+
+.login-window .login-form {
+  display: flex;
+}
+
+.login-window .login-form input {
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #B5BAC1;
+  font-family: inherit;
+  font-size: 24px;
+  text-align: center;
+}
+
+.login-window .login-form input:focus {
+  border-bottom: 2px solid rgb(85, 21, 21);
+  transition: all 1s ease;
+}
+
+.login-window .login-button {
+  background: inherit;
+}
+
+.login-window .login-button:disabled {
+  color: #4d5054;
+}
+
+.login-window .login-button:disabled:hover {
+  box-shadow: none;
+}
+
+.login-window .error-message {
+  display: none;
+  position: absolute;
+  top: 100%;
+  margin-top: 5px;
+  font-family: "Dokdo", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 15px;
+  color: rgb(252, 0, 0);
+}
+
+.chat-window {
+  visibility: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column-reverse;
+  position: relative;
+  padding-bottom: 40px;
+}
+
+.chat-window .chat-section {
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  margin-bottom: 40px;
+}
+
+.chat-window .chat-section::-webkit-scrollbar {
+  background: transparent;
+  width: 12px;
+}
+
+.chat-window .chat-section::-webkit-scrollbar-thumb {
+  background: linear-gradient(#575050, #383a41, #2B2D31);
+}
+
+.chat-window .send-form {
+  width: 100%;
+  position: absolute;
+  bottom: 40px;
+  display: flex;
+}
+
+.chat-window .my-chat {
+  font-size: 24px;
+  padding-left: 10px;
+}
+
+.chat-window .send-message {
+  border: none;
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+}
+
+.chat-window .send-message:hover {
+  box-shadow: none;
+}
+
+.new-chat {
+  margin: 2px;
+}
+
+.right-move {
+  float: right;
+}
+
+.user-section {
+  display: flex;
+  align-items: end;
+}
+
+.reverse {
+  flex-direction: row-reverse;
+}
+
+.other-user {
+  color: #858a9a;
+  margin: 0 10px;
+  font-size: 20px;
+}
+
+.user {
+  color: #858a9a;
+  margin: 0 10px;
+  font-size: 20px;
+}
+
+.created-at {
+  font-size: 12px;
+  display: inline;
+}
+
+.my-created-at {
+  display: flex;
+  justify-content: end;
+  line-height: center;
+  font-size: 12px;
+}
+
+.message-section {
+  cursor: pointer;
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.message-content {
+  padding: 5px;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.delete-button {
+  background-color: transparent;
+  color: rgb(233, 41, 41);
+  margin: 0 10px;
+  padding: 0;
+  font-size: 12px;
+}
+
+.delete-button:hover {
+  visibility: visible;
+}

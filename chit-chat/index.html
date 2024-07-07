@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/src/assets/vaco_symbol.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chit Chat</title>
+    <link rel="stylesheet" href="/src/styles/reset.css" />
+    <link rel="stylesheet" href="/src/styles/index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dokdo&family=East+Sea+Dokdo&display=swap" rel="stylesheet">
+    <script defer type="module" src="/src/js/app.js"></script>
+    <script defer type="module" src="/src/js/firebase.js"></script>
+  </head>
+  <body>
+    <h1 class="a11y-hidden">Chit Chat</h1>
+    <img id="vaco" src="/src/assets/vaco.png" alt="바닐라코딩 로고"/>
+    <main>
+      <section class="login-window">
+        <h2 class="a11y-hidden">로그인 화면</h2>
+        <h3 class="chat-title">너의 목소리를 들려줘...</h3>
+        <form class="login-form user-form">
+          <input type="text" class="user-input">
+          <button class="login-button" disabled>입장</button>
+        </form>
+        <p class="error-message">
+          특수문자를 제외한 모든 문자열이 가능합니다.<br>
+          (2글자 이상 20글자 미만)
+        </p>
+      </section>
+      <section class="chat-window">
+        <h2 class="a11y-hidden">채팅 화면</h2>
+        <div class="chat-section">
+        </div>
+        <div class="input-section">
+          <form class="send-form user-form">
+            <input type="text" class="user-input my-chat">
+            <button class="send-message" type="submit">전송</button>
+          </form>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
