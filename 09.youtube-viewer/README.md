@@ -1,165 +1,31 @@
-<br>
-<br>
+> React를 활용한 Youtube Video List 페이지 구현 과제입니다.
+## 📽️ 기능 구현 (시연)
 
-<p align="center">
-  <img src="/src/assets/vaco.png"  width="400">
-</p>
+|👇🏽 [화면 1] (초기 화면) | 👇🏽 [화면 2] (검색) |👇🏽 [화면 3] (모달) |
+|-----------|-----------|------------|
+| <img src="https://github.com/vanillacoding/fullstack-bootcamp17-w11/assets/106927728/a8e1bee4-07ac-47a5-b335-975df013251b" width="220px" alt="초기화면">  | <img src="https://github.com/vanillacoding/fullstack-bootcamp17-w11/assets/106927728/e1a49446-943c-4c2f-9718-232c2b2a7c80" width="220px" alt="검색">  |   <img src="https://github.com/vanillacoding/fullstack-bootcamp17-w11/assets/106927728/480980ee-f5d7-4a94-a340-bc5da4a34901" width="220px" alt="모달"> |
 
-<br>
-<br>
-
-> 바닐라코딩의 모든 과제는 실제 기업에서 주어지는 과제에 기반하여 제작되었으며, 저작권법의 보호를 받습니다. 개인 블로그 등의 공개된 장소에 관련 내용을 공유하거나 개인적으로 지인들과 공유하는 등의 행위는 삼가해주시기 바랍니다.
-
-<br>
-
-# Youtube Viewer
-
-![Youtube](/youtube.jpg)
-
-<br>
-<br>
-
-## 📌 작업 준비
-
-과제를 시작하기 전, 아래 1-3 단계를 진행합니다. 과제를 시작하는 단계에서 최초 1회만 진행하시면 됩니다.
-
-<br>
-
-### 1. 과제 클론받기
-
-터미널에서 아래의 Git 명령어를 이용하여 과제를 클론(다운로드) 받으세요.
-
-```sh
-git clone 과제_GIT_URI
-```
-
-> 과제\_GIT_URI는 Github 과제 저장소의 메인 페이지에서 초록색 `<> Code` 버튼을 클릭하시면 확인할 수 있습니다.
-
-<br>
-
-### 2. 과제 디렉토리로 이동하기
-
-다음 명령어를 이용하여 과제 디렉토리로 이동하세요.
-
-```sh
-cd 과제_저장소_이름
-```
-
-<br>
-
-### 3. 관련 의존성 패키지를 설치하세요.
-
-터미널의 과제 디렉토리 내에서 아래 명령어를 실행하세요.
-
-```sh
-npm install
-```
-
-> `package.json`의 `engines` 필드에 명시된 Node.js와 npm 버전을 확인하신 후, 동일한 버전을 사용해주세요.
-
-<br>
-<br>
-
-## 📌 작업 진행
-
-<br>
-
-### 1. VS Code 실행
-
-터미널에서 과제 디렉토리로 이동하여 아래 명령어를 실행하면, VS Code에서 과제 파일이 열립니다.
-
-```sh
-code .
-```
-
-> [VS Code에서 `code` 명령어 설치하는 방법](https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line)
-
-<br>
-
-### 2. 로컬 서버 실행
-
-터미널에서 과제 디렉토리로 이동하여 아래 명령어를 실행합니다.
-
-```sh
-npm run dev # visit localhost:5173
-```
-
-> 실행 명령어는 과제에 따라 상이할 수 있으므로, 반드시 `README.md` 파일의 내용을 확인 후 진행해주세요.
-
-<br>
-
-### 4. 로컬 서버 중지
-
-작업이 끝났을 경우, 터미널의 로컬 서버 실행창에서 `ctrl + c`를 입력하여 실행 중이던 로컬 서버를 중지합니다. 추후 작업 재개시, 로컬 서버를 다시 실행하고, 작업 종료시 로컬 서버를 중지시키는 행위를 매번 반복합니다.
-
-> 로컬 서버를 장시간 동안 켜놓을 경우, 컴퓨터의 리소스가 낭비될 수 있습니다. 장시간 작업을 중단하는 경우에는 로컬 서버를 종료시키고 다시 재개하는 시점에 다시 로컬 서버를 시작하세요.
-
-<br>
-<br>
-
-## 📌 리서치 TODO
-
-> 과제 제출 이후, 조사하고 실험한 퀴즈나 내용을 정리하여 공유해주세요.
-
-<br>
-
-### 과제 시작 전 (혹은 병행)
-
-<br>
-
-- [ ] `try..catch` 문법에 대해 다시 한번 간략히 살펴보세요.
-- [ ] 비동기 동작 흐름, `async`/`await` 문법에 대해서도 간략히 살펴보세요.
-- [ ] `useEffect`의 사용법을 정확히 조사해보시고, 사이드 이펙트의 정의에 대해서도 정확히 파악해보세요.
-- [ ] 리액트에서 동적으로 렌더링하는 목록에는 `key`라는 Props를 반드시 추가해주어야 합니다. 왜 그럴까요?
-- [ ] `styled-components`의 특징이나 사용시 주의할 점에 대해 간략하게 조사해보세요.
-- [ ] `useMemo`의 용도와 사용법에 대해 조사해보세요. `React.memo`와의 차이점도 조사해보세요.
-- [ ] `useCallback`의 용도와 사용법에 대해 조사해보세요.
-
-<br>
-
-### 과제 제출 후
-
-- [ ] 리액트의 상태는 비동기로 업데이트 됩니다. 왜 그럴까요?
-- [ ] 리액트에서 말하는 사이드 이펙트를 한 문장으로 정의내릴 수 있는지 확인해보세요.
-- [ ] 가상돔이란 무엇이고, Diffing Algorithm의 구체적인 동작 원리는 어떻게 될까요?
-- [ ] [`Fetch API`](https://developer.mozilla.org/ko/docs/Web/API/Fetch_API)와 유사한 대안은 어떤 것들이 있으며, 각각 어떤 차이점이 있을까요?
-- [ ] 리액트의 Strict Mode는 어떤 목적일까요? (일반 자바스크립트에도 Strict Mode가 있습니다.)
-- [ ] CSS in JS의 장점과 단점은 무엇일까요?
-- [ ] Bundler(Webpack, Rollup, Parcel, Vite, SWC, etc), Tree Shaking, Polyfill
-
-<br>
-<br>
-
-## 📌 과제 구현사항 TODO
-
-> 반드시 [Thinking in React](https://ko.react.dev/learn/thinking-in-react)에서 권장하는 진행 순서에 따라 작업하세요.
->
-> 작업 시작 전에 [파일 구조](https://ko.legacy.reactjs.org/docs/faq-structure.html)에 대한 글을 읽어보세요.
->
-> 아래에 명시된 조건 이외에는 최대한 상식 선에서 구현해주세요.
-
-<br>
-
+## ☑️ 기능 구현 (체크리스트)
 ### [화면 1] 영상 목록 UI (URL: `/`)
 
-- [ ] 초기 진입 시, 랜덤하게 선정된 영상 목록을 최소 10개 보여주어야 합니다.
-- [ ] 초기 진입 시, 영상 목록은 5개씩 최소 2줄(5 X 2) 이상을 보여주어야 합니다.
-- [ ] 각 영상에 대하여 최소한 아래 정보들을 보여주어야 합니다.
-  - [ ] 영상 제목
-  - [ ] 영상 대표 이미지
-  - [ ] 영상 업로드 날짜
-  - [ ] 영상 설명 (30 글자 이상일 경우, 생략 처리합니다.)
+- [x] 초기 진입 시, 랜덤하게 선정된 영상 목록을 최소 10개 보여주어야 합니다.
+- [x] 초기 진입 시, 영상 목록은 5개씩 최소 2줄(5 X 2) 이상을 보여주어야 합니다.
+- [x] 각 영상에 대하여 최소한 아래 정보들을 보여주어야 합니다.
+  - [x] 영상 제목
+  - [x] 영상 대표 이미지
+  - [x] 영상 업로드 날짜
+  - [x] 영상 설명 (30 글자 이상일 경우, 생략 처리합니다.)
   - [ ] 그 외 개인적으로 추가하고 싶은 사항
 - [ ] 사용자가 페이지 하단(혹은 유사한 기준)으로 스크롤 했을 경우, 기존 영상 목록 하단에 영상들을 추가해주어야 합니다.
-- [ ] 사용자가 영상 목록의 영상을 클릭할 경우, 화면 2로 이동합니다.
-- [ ] 사용자가 검색어를 입력할 수 있는 입력창이 있어야 합니다.
-- [ ] 사용자가 검색어를 입력하고 엔터 키를 입력할 경우, 기존 영상 목록은 모두 사라지고 검색어에 대한 영상 목록을 보여주어야 합니다.
+- [x] 사용자가 영상 목록의 영상을 클릭할 경우, 화면 2로 이동합니다.
+- [x] 사용자가 검색어를 입력할 수 있는 입력창이 있어야 합니다.
+- [x] 사용자가 검색어를 입력하고 엔터 키를 입력할 경우, 기존 영상 목록은 모두 사라지고 검색어에 대한 영상 목록을 보여주어야 합니다.
 - [ ] 사용자가 검색한 결과를 보여주는 경우, 페이지 URL에 검색어를 쿼리 파라미터로 추가해주어야 합니다. 예) `/?q=javaScript`
 - [ ] 검색어가 포함된 URL(예: `/?q=javaScript`)로 초기 진입할 경우, 랜덤한 영상 목록이 아닌 검색 결과 목록을 보여주어야 합니다.
-- [ ] 빈 공백을 입력하고 엔터 키를 입력할 경우, 검색어를 다시 확인해 달라는 의미의 오류 메시지가 표기되어야 합니다.
-- [ ] 오류 메시지는 Modal 형태의 UI로 보여주어야 합니다.
-- [ ] 오류 메시지 Modal의 크기는 전체 화면 크기보다 작은 사이즈여야 하고, Modal 외곽 영역을 클릭할 경우 Modal은 닫히도록 합니다.
-- [ ] 오류 메시지 Modal의 우측 상단에는 X 버튼이 있어야 합니다. X 버튼을 클릭할 경우 Modal은 닫히도록 합니다.
+- [x] 빈 공백을 입력하고 엔터 키를 입력할 경우, 검색어를 다시 확인해 달라는 의미의 오류 메시지가 표기되어야 합니다.
+- [x] 오류 메시지는 Modal 형태의 UI로 보여주어야 합니다.
+- [x] 오류 메시지 Modal의 크기는 전체 화면 크기보다 작은 사이즈여야 하고, Modal 외곽 영역을 클릭할 경우 Modal은 닫히도록 합니다.
+- [x] 오류 메시지 Modal의 우측 상단에는 X 버튼이 있어야 합니다. X 버튼을 클릭할 경우 Modal은 닫히도록 합니다.
 - [ ] Modal을 닫을 경우 나타나는 영상 목록은 Modal을 열기 전 상태의 기존 영상 목록, 기존 스크롤 위치가 그대로 유지된 상태로 보여야 합니다.
 
 <br>
@@ -167,49 +33,65 @@ npm run dev # visit localhost:5173
 ### [화면 2] 영상 상세 정보 Modal UI (URL: `/:videoId`)
 
 - [ ] 사용자가 선택한 영상에 대하여 최소한 아래 정보들을 보여주어야 합니다.
-  - [ ] 영상 제목
-  - [ ] 영상 업로드 날짜
-  - [ ] 영상 설명 전문
-  - [ ] 재생 가능한 형태의 영상
+  - [x] 영상 제목
+  - [x] 영상 업로드 날짜
+  - [x] 영상 설명 전문
+  - [x] 재생 가능한 형태의 영상
   - [ ] 그 외 개인적으로 추가하고 싶은 사항
-- [ ] Modal의 크기는 전체 화면 크기보다 작은 사이즈로 보여주고, Modal 외곽 영역을 클릭할 경우 Modal은 닫히고 화면 1로 이동합니다.
-- [ ] Modal의 우측 상단에는 X 버튼이 있어야 합니다. X 버튼을 클릭할 경우 Modal은 닫히고 마찬가지로 화면 1로 이동합니다.
+- [x] Modal의 크기는 전체 화면 크기보다 작은 사이즈로 보여주고, Modal 외곽 영역을 클릭할 경우 Modal은 닫히고 화면 1로 이동합니다.
+- [x] Modal의 우측 상단에는 X 버튼이 있어야 합니다. X 버튼을 클릭할 경우 Modal은 닫히고 마찬가지로 화면 1로 이동합니다.
 - [ ] Modal을 닫을 경우 나타나는 화면 1의 영상 목록은 Modal을 열기 전 상태의 기존 영상 목록, 기존 스크롤 위치가 그대로 유지된 상태로 보여야 합니다.
-- [ ] `/:videoId` URL로 직접 진입할 경우에 대한 별도의 기술적인 대응은 하지 않습니다.
+- [x] `/:videoId` URL로 직접 진입할 경우에 대한 별도의 기술적인 대응은 하지 않습니다.
 
 <br>
 
-### 테스트 코드 작성하기
+## 🗂️ 폴더 구조
+```
+🗂️cypress
+┣ 📁e2e
+┣ 📁fixtures
+┗ 📁support
+🗂️src
+┣ 📁assets
+┃ ┣ finder.png
+┃ ┣ premium.png
+┃ ┣ vaco.png
+┃ ┗ youtube.png
+┣ 📁common
+┃ ┣ ButtonStyle.jsx
+┃ ┣ ContainerStyle.jsx
+┃ ┣ FormStyle.jsx
+┃ ┣ InputStyle.jsx
+┃ ┣ MainStyle.jsx
+┃ ┗ utils.js
+┣ 📁header
+┃ ┣ Header.jsx
+┃ ┣ HeaderStyle.jsx
+┃ ┗ SearchInput.jsx
+┣ 📁modal
+┃ ┣ ErrorModal.jsx
+┃ ┣ ErrorModalStyle.jsx
+┃ ┣ VideoModal.jsx
+┃ ┗ VideoModalStyle.jsx
+┣ 📁video-list
+┃ ┣ VideoList.jsx
+┃ ┣ VideoListStyle.jsx
+┃ ┣ VideoListEntry.jsx
+┃ ┗ VideoListEntryStyle.jsx
+┣ App.jsx
+┣ index.jsx
+┗ setupTests.js
+```
 
-- [ ] 여러분이 작성한 컴포넌트에 대한 단위 테스트를 작성해주세요. (참고: [Redux 저장소](https://github.com/reduxjs/redux/tree/master/examples/shopping-cart/src))
-
-<br>
-<br>
-
-## 📌 참고사항
-
-<br>
-
-### Youtube API Key 발급받기
-
-1. [Youtube API Console](https://console.developers.google.com/)로 접속하세요.
-2. **CREATE PROJECT**를 선택하세요.
-3. 프로젝트 이름을 입력하고, 생성하세요.
-4. **+ ENABLE APIS AND SERVICES** 를 선택하세요.
-5. "Youtube" 검색 후, **YouTube Data API v3**를 선택하세요.
-6. Youtube Data API v3를 **ENABLE** 하세요.
-7. **좌측 Credentials 메뉴**를 선택하세요.
-8. **Create Credentials**를 선택하세요.
-9. 본인의 API KEY를 확인하고, 환경변수로 설정하여 `/src/utils/youtube.js`를 통해 사용하세요.
-
-<br>
-
-### Youtube Video List API
-
-> 짧은 시간 내에 너무 많은 API 요청을 보내게 되면, 잠시동안 요청이 거부당할 수 있습니다. 그럴 경우에는 Mock Data를 만들어 활용하세요.
-
-<br>
-
-- https://developers.google.com/youtube/v3/docs/search/list?hl=ko
-
-<br>
+## 📌 커밋 컨벤션
+| 태그 이름 | 설명 |
+|---------|-----|
+| Feat | 새로운 기능을 추가하는 경우 |
+| Refactor | 코드 리팩토링 (Low & High) |
+| Design | CSS 등 사용자 UI 디자인 변경 |
+| Style | 코드 포맷 변경, 세미 콜론 누락 |
+| Move | 파일 구조를 변경하는 경우 |
+| Add | 새로운 파일을 추가하는 경우 |
+| Remove | 파일을 삭제하는 경우 |
+| Chore | 패키지 매너지를 설정하는 경우, 초기 빌드 업데이트 |
+| Comment | 주석 추가 및 변경 |
