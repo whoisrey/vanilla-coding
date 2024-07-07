@@ -1,0 +1,21 @@
+.lang-button {
+  text-decoration: none;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+  border: 1px solid #EFEFEF;
+  transition: 0.3s all ease;
+  background-size: cover;
+  background-position: center;
+  width: 5rem;
+  height: 5rem;
+}
+
+.lang-button:hover,
+.lang-button.active {
+  box-shadow: 0 10px 10px #4d0674;
+}
+
+.selected {
+  box-shadow: 0 10px 10px #4d0674;
+}

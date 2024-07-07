@@ -1,0 +1,34 @@
+.battle-card {
+  width: 250px;
+  padding: 20px;
+  border: 3px double #5E0080;
+  border-radius: 8px;
+  color: #5E0080;
+}
+
+.winner {
+  box-shadow: 10px 10px 10px #5E0080;
+}
+
+.winner-is {
+  position: absolute;
+  color: red;
+  font-size: 24px;
+}
+
+.center-text {
+  font-size: 24px;
+}
+
+.link {
+  text-decoration: underline;
+  font-weight: 300;
+}
+
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin: 30px auto 50px;
+  display: block;
+}

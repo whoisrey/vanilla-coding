@@ -1,0 +1,49 @@
+.card {
+  width: 230px;
+  padding: 20px;
+  border-right: 1px solid #5E0080;
+  border-bottom: 3px solid #5E0080;
+  margin: 10px;
+  border-radius: 10px;
+  color: #5E0080;
+}
+
+.card:hover {
+  box-shadow: 10px 10px 10px #5E0080;
+  transition: all 1s;
+}
+
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin: 30px auto 50px;
+  display: block;
+}
+
+.main-info {
+  margin: 2rem 0;
+  text-align: center;
+  color: #bb92c9;
+}
+
+.main-info h2 {
+  font-size: 24px;
+  color: #5E0080;
+  margin: 1rem 0;
+}
+
+.main-info .link {
+  font-size: 18px;
+  text-decoration: underline;
+  font-weight: 300;
+}
+
+.sub-info {
+  border-top: 1px solid #8006ad;
+  border-left: 1px solid #8006ad;
+  border-right: 2px solid #8006ad;
+  border-bottom: 3px solid #8006ad;
+  color: #8006ad;
+  padding: 1rem;
+}

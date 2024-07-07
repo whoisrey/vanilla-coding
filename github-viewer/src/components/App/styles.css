@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Yeon+Sung&display=swap');
+
+html,
+body,
+#app {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  font-family: "Yeon Sung", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  background: #EFEFEF;
+  color: #5E0080;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px;
+}
+
+.container-sm {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.navigation-menu {
+  justify-content: space-between;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex {
+  display: flex;
+}
+
+.grid {
+  display: grid;
+  gap: 10px;
+}
+
+.space-around {
+  justify-content: space-around;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.header-lg {
+  font-size: 35px;
+  font-weight: 300;
+  margin: 20px 0;
+}
+
+.header-sm {
+  font-size: 20px;
+  font-weight: 500;
+  margin: 10px;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.error {
+  color: #ff1616;
+  font-size: 20px;
+  margin: 50px 0;
+}

@@ -1,0 +1,24 @@
+.user-input {
+  border: none;
+  border-bottom: 1px solid #5E0080;
+  background: inherit;
+  outline: none;
+  font-size: 32px;
+  font-family: inherit;
+  color: inherit;
+  text-align: center;
+}
+
+.user-input:hover,
+.user-input:focus {
+  border-bottom: 3px solid #5E0080;
+  transition: all 1s;
+}
+
+.user-input:disabled {
+  background: linear-gradient(90deg, rgba(51,1,70,1) 0%, rgba(79,2,108,1) 50%, rgba(157,9,210,1) 100%);
+}
+
+.user-label {
+  font-size: 24px;
+}
