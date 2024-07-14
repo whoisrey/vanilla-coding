@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@100&family=Teko:wght@300&display=swap');
+
+body {
+  padding: 50px;
+  font-family: "IBM Plex Sans KR", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+a {
+  color: #00b7ff;
+  text-decoration: none;
+}
+
+h1 {
+  font-weight: normal;
+  font-size: 5rem;
+}
+
+header {
+  font-size: 2rem;
+}
+
+footer {
+  margin-top: 4rem;
+  font-size: 0.8rem;
+  font-family: "Lucida Grande", sans-serif;
+}
+
+.code-container {
+  border: 1px solid #ccc;
+  padding-left: 1rem;
+  width: 16rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+}
+
+.install-code {
+  font-family: "Teko", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.install-code.blink {
+  animation: blink 0.5s steps(1) infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}

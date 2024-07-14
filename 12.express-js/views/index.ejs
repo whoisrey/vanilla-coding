@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <%- include('partials/header') %>
+
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+
+    <div class="code-container">
+      <p class="install-code">$ npm install express --save</p>
+    </div>
+
+    <%- include('partials/footer') %>
+  </body>
+  <script src="/javascripts/client.js"></script>
+</html>
