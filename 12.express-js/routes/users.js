@@ -78,6 +78,10 @@ router.get("/:user_id/token", (req, res, next) => {
 router.get("/:user_id/secret", (req, res, next) => {
   const token = req.headers["vc-client-token"];
 
+  if (!token) {
+    res.status(401).json({ error: "Token not provided" });
+  }
+
   jwt.verify(token, exports.YOUR_SECRET_KEY, (err, decoded) => {
     if (err) {
       res.status(401).json({ error: "unauthorized" });

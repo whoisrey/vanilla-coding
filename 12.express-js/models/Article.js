@@ -6,8 +6,8 @@ mongoose.connect(YOUR_DATABASE_URI);
 
 const articleSchema = new mongoose.Schema({
   source: {
-    id: String,
-    name: String,
+    id: { type: String, trim: true },
+    name: { type: String, required: true, trim: true },
   },
   author: String,
   title: String,

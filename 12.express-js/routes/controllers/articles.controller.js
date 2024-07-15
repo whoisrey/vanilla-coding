@@ -1,7 +1,7 @@
 const Article = require("../../models/Article");
 
 exports.getAll = async (req, res, next) => {
-  const articles = await Article.find();
+  const articles = await Article.find().lean();
 
   res.status(200).json({ articles });
 };
@@ -15,7 +15,11 @@ exports.create = async (req, res, next) => {
 exports.update = async (req, res, next) => {
   try {
     const articleId = req.params.article_id;
-    const updatedArticle = await Article.findByIdAndUpdate(articleId, req.body);
+    const updatedArticle = await Article.findByIdAndUpdate(
+      articleId,
+      req.body,
+      { new: true, runValidators: true }
+    );
 
     res.status(200).json({ article: updatedArticle, result: "ok" });
   } catch {
