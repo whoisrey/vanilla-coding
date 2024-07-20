@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      <%= data.title %> - Codewars
+    </title>
+    <link rel="stylesheet" href="/stylesheets/index.css" />
+    <link rel="stylesheet" href="/stylesheets/problems.css" />
+    <link rel="stylesheet" href="/stylesheets/modal.css" />
+    <link rel="stylesheet" href="/stylesheets/buttons.css" />
+    <link rel="stylesheet" href="/stylesheets/nav.css" />
+    <link rel="stylesheet" href="/lib/codemirror.css">
+    <link rel="stylesheet" href="/theme/blackboard.css">
+    <script src="/lib/codemirror.js" defer></script>
+    <script src="/addon/edit/closebrackets.js" defer></script>
+    <script src="/addon/edit/matchbrackets.js" defer></script>
+    <script src="/addon/edit/trailingspace.js" defer></script>
+    <script src="/mode/javascript/javascript.js" defer></script>
+    <script src="/javascripts/handlers.js" defer></script>
+    <script src="/javascripts/settings.js" defer></script>
+</head>
+<body>
+  <header>
+    <%- include("nav") %>
+  </header>
+  <main>
+    <div class="problem-detail-container">
+      <div class="problem-detail">
+        <div class="problem-detail-header">
+          <h2 class="problem-detail-title">
+            <%= data.title %>
+          </h2>
+          <p class="problem-detail-level">
+            Lv.<%= data.difficulty_level %>
+          </p>
+        </div>
+        <p class="problem-detail-description">
+          <%= data.description %>
+        </p>
+        <div class="problem-detail-footer">
+          <p class="problem-detail-users">
+            <img class="user-small" src="/icons/join-user.png">
+            <%= data.completed_users %>
+          </p>
+          <button class="home-button">LIST</button>
+        </div>
+      </div>
+      <form class="editor-form" method="post">
+        <textarea id="code" name="code"><%= userCode %></textarea>
+        <button type="submit" class="submit-button">SUBMIT</button>
+      </form>
+    </div>
+  </main>
+  <div>
+    <% if(result) { %>
+      <%- include("success") %>
+    <% } else if(result !== null){ %>
+      <%- include("failure", { messages, error }) %>
+    <% } %>
+  </div>
+</body>
+</html>

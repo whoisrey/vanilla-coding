@@ -1,0 +1,104 @@
+.login-form,
+.join-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 10rem;
+}
+
+.login-container,
+.join-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1.5rem;
+  gap: 2rem;
+  width: 20rem;
+}
+
+.login-container {
+  background-color: #222327;
+}
+
+.join-container {
+  background-color: #101114;
+}
+
+.login-username-label,
+.login-password-label,
+.join-label {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.login-username-label,
+.login-password-label {
+  border: 1px solid #3F3F45;
+}
+
+.join-label {
+  border: 1px solid transparent;
+}
+
+.login-input,
+.join-input {
+  width: 100%;
+  padding: 0.5rem 0;
+  border: none;
+  border-radius: 5px;
+  text-indent: 20%;
+  background-position: 0.5rem center;
+  background-repeat: no-repeat;
+  background-size: 1rem 1rem;
+  color: #fff;
+}
+
+.login-input:focus,
+.join-input:focus{
+  outline: none;
+  box-shadow: 0 0 10px #CCCCCC;
+  transition: all 0.4s;
+}
+
+.login-input {
+  background-color: #27272A;
+}
+
+.join-input {
+  background-color: #0A0A0A;
+}
+
+.login-container #loginUsername {
+  background-image: url("/icons/login-user.png");
+}
+
+.login-container #loginPassword {
+  background-image: url("/icons/login-padlock.png");
+}
+
+.join-container #joinId {
+  background-image: url("/icons/join-user.png");
+}
+
+.join-container #joinPassword {
+  background-image: url("/icons/join-padlock.png");
+}
+
+.join-link {
+  text-decoration: none;
+  color: #fff;
+}
+
+.empty {
+  border: 1px solid red;
+}
+
+.username-empty,
+.password-empty {
+  display: none;
+  font-size: 0.7rem;
+  color: red;
+}

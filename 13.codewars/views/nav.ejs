@@ -1,0 +1,13 @@
+<nav class="nav-container">
+  <img class="home-image" src="/logos/logo.svg" />
+  <ul class="menu-lists">
+    <% if (!isAuthenticated) { %>
+      <li><a href="/join">Join</a></li>
+      <li><a href="/login">Login</a></li>
+    <% } else { %>
+      <li><a href="/logout">Logout</a></li>
+      <li><span>Welcome, <strong><%= user.username %>님</strong></span></li>
+    <% } %>
+  </ul>
+</nav>
+<script src="/javascripts/handlers.js"></script>

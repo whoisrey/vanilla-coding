@@ -1,0 +1,113 @@
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal {
+  padding: 2rem;
+  color: #fff;
+  background-color: #CF4B32;
+  border-radius: 5px;
+  box-shadow: 0 0 10px #ccc;
+}
+
+.modal-header {
+  display: flex;
+  gap: 13rem;
+  align-items: center;
+}
+
+.close-button {
+  cursor: pointer;
+  color: #ffffff;
+}
+
+.close-button:hover {
+  color: #fd7200
+}
+
+.success, .failure, .message {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.success, .message {
+  align-items: center;
+}
+
+.success {
+  animation: success 1s infinite;
+}
+
+.failure {
+  animation: failure 1s infinite;
+}
+
+.message {
+  animation: message 1s infinite;
+}
+
+.failure-message {
+  display: flex;
+  flex-direction: column;
+  padding-inline-start: 0;
+  color: #fff;
+}
+
+.failure-answer {
+  padding-right: 4rem;
+}
+
+@keyframes success {
+  0% {
+    background: rgba(0, 0, 255, 0.2);
+    box-shadow: 0 0 5px rgba(0, 0, 255, 0.2);
+  }
+  50% {
+    background: rgba(0, 0, 255, 0.6);
+    box-shadow: 0 0 20px rgba(0, 0, 255, 0.6);
+  }
+  100% {
+    background: rgba(0, 0, 255, 0.2);
+    box-shadow: 0 0 5px rgba(0, 0, 255, 0.2);
+  }
+}
+
+@keyframes failure {
+  0% {
+    background: rgba(255, 0, 0, 0.2);
+    box-shadow: 0 0 5px rgba(255, 0, 0, 0.2);
+  }
+  50% {
+    background: rgba(255, 0, 0, 0.6);
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.97);
+  }
+  100% {
+    background: rgba(85, 2, 2, 0.831);
+    box-shadow: 0 0 5px rgba(255, 0, 0, 0.2);
+  }
+}
+
+@keyframes message {
+  0% {
+    background: rgba(31, 30, 30, 0.2);
+    box-shadow: 0 0 5px rgba(77, 75, 75, 0.2);
+  }
+  50% {
+    background: rgba(118, 115, 115, 0.6);
+    box-shadow: 0 0 20px rgba(119, 111, 111, 0.97);
+  }
+  100% {
+    background: rgba(26, 25, 25, 0.831);
+    box-shadow: 0 0 5px rgba(2, 1, 1, 0.2);
+  }
+}

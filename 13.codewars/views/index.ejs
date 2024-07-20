@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Codewars</title>
+    <link rel="stylesheet" href="/stylesheets/index.css" />
+    <link rel="stylesheet" href="/stylesheets/problems.css" />
+    <link rel="stylesheet" href="/stylesheets/modal.css" />
+    <link rel="stylesheet" href="/stylesheets/nav.css" />
+  </head>
+  <body>
+    <header>
+      <%- include("nav") %>
+    </header>
+    <main>
+      <div class="title-container">
+        <p class="title-top">Achieve mastery</p>
+        <p class="title-bottom">through challenge</p>
+        <p class="title-description">Improve your development skills by training with your peers on code kata that continuously challenge and push your coding practice.</p>
+      </div>
+      <div class="problem-collection">
+        <% data.forEach((item) => { %>
+          <a href="/problem/<%= item._id %>">
+            <div class="problem-info">
+              <p class="problem-title">
+                <%= item.title %>
+              </p>
+              <div>
+                <img class="user-medium" src="/icons/join-user.png"> <%= item.completed_users %>
+              </div>
+              <p class="problem-level">
+                Lv.<%= item.difficulty_level %>
+              </p>
+            </div>
+          </a>
+        <% }) %>
+      </div>
+    </main>
+  </body>
+</html>

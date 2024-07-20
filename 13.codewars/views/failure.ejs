@@ -1,0 +1,24 @@
+<div class="modal-container">
+  <div class="modal failure">
+    <div class="modal-header">
+      <h3>Failed.</h3>
+      <button class="close-button">X</ㅠ>
+    </div>
+    <% if(error) { %>
+      <p>Error: <%= error %></p>
+    <% } else { %>
+      <ul class="failure-message">
+        <% messages.forEach((message, index) => { %>
+          <li class="failure-answer">
+            <p>No.<%= index + 1 %></p>
+            <% if(message === "PASS") { %>
+              PASS
+              <% } else { %>
+                <%= message %>
+              <% } %>
+          </li>
+        <% }); %>
+      </ul>
+    <% } %>
+  </div>
+</div>

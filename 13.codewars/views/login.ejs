@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Codewars</title>
+    <link rel="stylesheet" href="/stylesheets/index.css" />
+    <link rel="stylesheet" href="/stylesheets/users.css" />
+    <link rel="stylesheet" href="/stylesheets/modal.css" />
+    <link rel="stylesheet" href="/stylesheets/buttons.css" />
+    <link rel="stylesheet" href="/stylesheets/nav.css" />
+  </head>
+  <body>
+    <header>
+      <%- include("nav") %>
+    </header>
+    <div class="login-container">
+      <img class="logo-medium" src="/logos/logo.png">
+      <form class="login-form" method="post">
+        <label for="loginUsername" class="login-username-label">
+          <input id="loginUsername" class="login-input" name="username" placeholder="username" autocomplete="off">
+        </label>
+        <span class="username-empty">ENTER YOUR NAME</span>
+        <label for="loginPassword" class="login-password-label">
+          <input id="loginPassword" class="login-input" name="password" placeholder="password" type="password">
+        </label>
+        <span class="password-empty">ENTER YOUR PASSWORD</span>
+        <button type="submit">SIGN IN</button>
+      </form>
+      <div>
+        <a href="/join" class="join-link">SIGN UP</a> if you don't have an account yet.
+      </div>
+    </div>
+    <div>
+      <% if (data?.message) { %>
+        <%- include("message") %>
+      <% } %>
+    </div>
+  </body>
+</html>

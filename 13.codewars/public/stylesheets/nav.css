@@ -1,0 +1,36 @@
+.nav-container {
+  display: flex;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #121418;
+  border-bottom: 1px solid #4C4C4D;
+  z-index: 999;
+}
+
+.nav-container .home-image {
+  cursor: pointer;
+  width: 10rem;
+}
+
+.menu-lists {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 1rem;
+  gap: 3rem;
+  color: #4C4C4D;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  color: #fff;
+  transition: all 1s;
+}

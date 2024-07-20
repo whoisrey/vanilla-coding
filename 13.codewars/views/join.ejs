@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Codewars</title>
+    <link rel="stylesheet" href="/stylesheets/index.css" />
+    <link rel="stylesheet" href="/stylesheets/users.css" />
+    <link rel="stylesheet" href="/stylesheets/modal.css" />
+    <link rel="stylesheet" href="/stylesheets/buttons.css" />
+    <link rel="stylesheet" href="/stylesheets/nav.css" />
+  </head>
+  <body>
+    <header>
+      <%- include("nav") %>
+    </header>
+    <div class="join-container">
+      <img class="logo-medium" src="/logos/logo.png">
+      <form class="join-form" method="post">
+        <label for="joinId" class="join-label">
+          <input id="joinId" class="join-input" name="username" placeholder="username" autocomplete="off">
+        </label>
+        <label for="joinPassword" class="join-label">
+          <input id="joinPassword" class="join-input" name="password" type="password" placeholder="password" autocomplete="off">
+        </label>
+        <button type="submit">ENLIST</button>
+      </form>
+    </div>
+    <div>
+      <% if (data && data.case === "Empty") { %>
+        <%- include("message", { message: data.message }) %>
+      <% } else if (data && data.case === "Duplicate") { %>
+        <%- include("message", { data: data }) %>
+      <% } %>
+    </div>
+  </body>
+</html>

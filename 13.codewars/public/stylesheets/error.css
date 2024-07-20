@@ -1,0 +1,31 @@
+body {
+  background-color: #15161A;
+  color: #FFFFFF;
+}
+
+.error-container {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  margin-top: 6rem;
+}
+
+.logo {
+  margin: 3rem 0;
+  width: 10rem;
+}
+
+.error-status {
+  color: #FF4D4D;
+  font-size: 0.8rem;
+}
+
+.error-message {
+  color: #CCCCCC;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.error-stack {
+  color: #BBBBBB;
+}

@@ -1,0 +1,47 @@
+.problem-detail-container {
+  display: flex;
+  margin-top: 2rem;
+}
+
+.problem-detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 20rem;
+  height: 20rem;
+  padding: 2rem;
+  padding-top: 0;
+  gap: 1rem;
+  background-color: #0C1021;
+  font-size: 0.8rem;
+  border-right: 1px solid #ccc;
+}
+
+.problem-detail-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.problem-detail-title {
+  font-size: 2rem;
+}
+
+.problem-detail-description {
+  box-shadow: 0 0 10px #3F3F45;
+  padding: 1rem;
+}
+
+.problem-detail-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.problem-detail-users {
+  color: #C9C9C9;
+}
+
+.user-small {
+  width: 0.5rem;
+}

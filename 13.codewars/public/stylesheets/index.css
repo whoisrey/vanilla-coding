@@ -1,0 +1,83 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin: 4rem;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #16171B;
+  color: #C9C9C9;
+}
+
+header {
+  margin-bottom: 2rem;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.title-container {
+  text-align: center;
+  font-size: 2rem;
+  width: 36rem;
+}
+
+.title-top {
+  color: #CF4B32;
+}
+
+.title-bottom {
+  color: #fff;
+}
+
+.title-description {
+  font-size: 0.8rem;
+  line-height: 160%;
+}
+
+.problem-collection {
+  display: flex;
+  gap: 2rem;
+}
+
+.problem-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.7rem;
+  border: 1px solid #3F3F45;
+  border-radius: 5px;
+  width: 10rem;
+  color: #ccc;
+  font-size: 0.6rem;
+}
+
+.problem-info:hover {
+  box-shadow: 0 0 10px #ccc;
+  transition: all 1s;
+}
+
+.problem-info .problem-title {
+  font-size: 0.8rem;
+}
+
+.problem-info:hover .problem-title {
+  padding-bottom: 1rem;
+  border-bottom: 3px solid #fff;
+  color: #fff;
+  transition: all 1s;
+}
+
+.problem-info .user-medium {
+  width: 0.7rem;
+}
+
+.problem-level {
+  font-weight: bold;
+}
