@@ -1,0 +1,30 @@
+<%- include("head") %>
+<link rel="stylesheet" href="/stylesheets/users.css" />
+<!-- <script type="module" src="/javascripts/validators.js" defer></script>
+<script type="module" src="/javascripts/handlers.js" defer></script> -->
+</head>
+<body>
+  <%- include("navigation") %>
+  <main>
+    <form class="login-form" method="post">
+      <div class="login-inputs">
+        <div class="login-email-container">
+          <label for="loginEmail" class="login-email-label">
+            <span>Email:</span>
+            <input id="loginEmail" class="login-email" type="email" name="email" autocomplete="off">
+          </label>
+          <p class="login-email-error message">Email address is required</p>
+        </div>
+        <div class="login-password-container">
+          <label for="loginPassword" class="login-password-label">
+            <span>Password:</span>
+            <input id="loginPassword" class="login-password" type="password" name="password">
+          </label>
+          <p class="login-password-error message">Password is required</p>
+        </div>
+      </div>
+      <button class="login-button">LOGIN</button>
+    </form>
+  </main>
+</body>
+</html>

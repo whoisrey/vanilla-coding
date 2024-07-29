@@ -1,0 +1,84 @@
+.modal-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--modal-background-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.modal-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+  padding: 2rem;
+  color: var(--text-color);
+  background-color: var(--first-color);
+  border-radius: 5px;
+  box-shadow: 0 0 10px var(--second-color);
+  animation: glow 2s infinite alternate;
+}
+
+.modal-title {
+  color: var(--white-color);
+  font-size: var(--font-large);
+  animation: pulse 0.5s infinite alternate;
+}
+
+.modal-content {
+  color: var(--red-color);
+  font-size: var(--font-medium);
+}
+
+.button-container {
+  display: flex;
+  gap: 4rem;
+}
+
+.button-container button {
+  width: 5rem;
+  background-color: var(--second-color);
+  color: var(--first-color);
+}
+
+.button-container button:hover {
+  width: 5rem;
+  background-color: var(--first-color);
+  color: var(--third-color);
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 10px var(--second-color), 0 0 20px var(--second-color), 0 0 30px var(--second-color), 0 0 40px var(--second-color);
+  }
+  50% {
+    box-shadow: 0 0 20px var(--second-color), 0 0 30px var(--second-color), 0 0 40px var(--second-color), 0 0 50px var(--second-color);
+  }
+  100% {
+    box-shadow: 0 0 10px var(--second-color), 0 0 20px var(--second-color), 0 0 30px var(--second-color), 0 0 40px var(--second-color);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.5);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

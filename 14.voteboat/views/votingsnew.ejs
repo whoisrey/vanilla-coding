@@ -1,0 +1,42 @@
+<%- include("head") %>
+<link rel="stylesheet" href="/stylesheets/votes.css" />
+</head>
+<body>
+  <%- include("navigation") %>
+  <main>
+    <form class="voting-form" method="post">
+      <div class="voting-container">
+        <div class="title-container">
+          <label for="title" class="title-label">
+            <span>Title:</span>
+            <input id="title" class="new-title" type="text" name="title" autocomplete="off">
+          </label>
+          <p class="title-error message">Voting title is required</p>
+        </div>
+        <div class="option-container">
+          <div class="option-header">
+            <span>Options</span>
+            <button type="button" class="create-button">+</button>
+          </div>
+          <label for="option" class="option-label">
+            <input id="option" class="new-option" name="options">
+            <input id="option" class="new-option" name="options">
+          </label>
+          <p class="option-error message">Option text is required</p>
+        </div>
+        <div class="expired-date-container">
+          <label for="expiredDate" class="expired-date-label">
+            <span>Expired At:</span>
+            <input id="expiredDate" class="expired-date" type="datetime-local" name="expired_at" >
+          </label>
+          <p class="expired-date-error message">Expired date is required</p>
+        </div>
+        <div class="button-container">
+          <button class="list-button">LIST</button>
+          <button class="entry-button">ENTRY</button>
+        </div>
+      </div>
+    </form>
+  </main>
+</body>
+</html>

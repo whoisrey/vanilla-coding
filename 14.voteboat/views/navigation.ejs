@@ -1,0 +1,31 @@
+<link rel="stylesheet" href="/stylesheets/navigation.css" />
+<header>
+  <nav class="nav-container">
+    <ul class="nav-lists">
+      <a href="/" class="home-link">
+        <img src="/images/logo.png" />
+      </a>
+      <% if (!isAuthenticated) { %>
+        <li>
+          <a href="/signup">Signup</a>
+        </li>
+        <li>
+          <a href="/login">Login</a>
+        </li>
+      <% } else { %>
+        <li>
+          <span>Welcome</span>
+        </li>
+        <li>
+          <a href="/logout">Logout</a>
+        </li>
+        <li>
+          <a href="/my-votings">Votes</a>
+        </li>
+        <li>
+          <a href="/votings/new">New</a>
+        </li>
+      <% } %>
+    </ul>
+  </nav>
+</header>

@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Pacifico&display=swap");
+
+:root {
+  --nav-color: #151721;
+  --modal-background-color: rgba(0, 0, 0, 0.5);
+  --background-color: #202231;
+  --background-sub-color: #272A38;
+  --text-color: #9165BC;
+  --first-color: #440B7D;
+  --second-color: #6B389C;
+  --third-color: #5C4DB7;
+  --black-color: #000000;
+  --gray-color: #CCCCCC;
+  --white-color: #FFFFFF;
+  --red-color: #FF0000;
+  --blue-color: #0000FF;
+  --font-small: 0.8rem;
+  --font-medium: 1.6rem;
+  --font-large: 2.4rem;
+}
+
+body {
+  font-family: "Pacifico", cursive;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  margin-top: 8rem;
+  font-size: var(--font-medium);
+}
+
+form {
+  display: flex;
+  background-color: var(--background-sub-color);
+  color: var(--text-color);
+  box-shadow: 0 0 1px solid var(--gray-color);
+  border-radius: 5px;
+  gap: 1rem;
+  position: relative;
+}
+
+input {
+  font-family: "Pacifico", cursive;
+  background: transparent;
+  border: none;
+  color: var(--white-color);
+  border-bottom: 1px solid var(--text-color);
+  outline: none;
+}
+
+button {
+  width: 50%;
+  font-family: inherit;
+  padding: 0.5rem;
+  color: var(--text-color);
+  cursor: pointer;
+  background: var(--first-color);
+  border: none;
+  border-bottom: 5px solid var(--second-color);
+  border-right: 5px solid var(--second-color);
+  border-radius: 1rem;
+}
+
+button:hover {
+  border: 1px solid var(--second-color);
+  transition: all 1s;
+}
+
+input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+  color: #6B389C;
+  opacity: 1;
+  display: block;
+  background: url(../images/calendar.png) no-repeat right 0.4rem center /
+  1.2rem auto;
+  width: 20px;
+  height: 20px;
+  border-width: thin;
+}
+
+input[type="datetime-local"] {
+  padding: 0;
+  color: var(--text-color);
+  font-size: var(--font-medium);
+}
+
+.yes-text {
+  color: var(--blue-color);
+}
+
+.no-text {
+  color: var(--red-color);
+}

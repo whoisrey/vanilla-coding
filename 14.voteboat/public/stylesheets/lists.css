@@ -1,0 +1,75 @@
+.list-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem;
+  background-color: var(--background-sub-color);
+  color: var(--text-color);
+  border-radius: 5px;
+  gap: 1rem;
+  position: relative;
+}
+
+.vote-lists {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4rem;
+}
+
+.vote-list {
+  padding: 1rem;
+  background-color: var(--background-color);
+  border-top: 6px solid var(--second-color);
+  border-bottom: 16px solid var(--first-color);
+  border-left: 6px solid var(--second-color);
+  border-right: 12px solid var(--first-color);
+}
+
+.vote-list:hover {
+  color: inherit;
+  background-color: var(--nav-color);
+  border-top: 1px solid var(--second-color);
+  border-bottom: 1px solid var(--first-color);
+  border-left: 1px solid var(--second-color);
+  border-right: 1px solid var(--first-color);
+  transition: all 1s;
+}
+
+.vote-list a {
+  color: var(--second-color);
+  text-decoration: none;
+}
+
+.vote-anchor {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.vote-title {
+  padding: 1rem;
+  color: var(--white-color);
+  border-bottom: 4px double var(--second-color);
+}
+
+.container {
+  display:flex;
+  gap: 1rem;
+}
+
+.container span,
+.option-container span {
+  color: var(--third-color);
+}
+
+.options-container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.option-container {
+  display: flex;
+  gap: 1rem;
+}

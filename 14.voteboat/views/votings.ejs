@@ -1,0 +1,72 @@
+<%- include("head") %>
+<link rel="stylesheet" href="/stylesheets/details.css" />
+</head>
+<body>
+  <%- include("navigation") %>
+  <main>
+    <div class="voting-container">
+      <% if (isCreator) { %>
+        <form action="/votings/<%= data._id %>/remove" class="delete-form" method="post">
+          <button type="submit" class="delete-button">DEL</button>
+        </form>
+      <% } %>
+      <div class="voting-info">
+        <div class="title container">
+          <span>Title: </span>
+          <h1><%= data.title %></h1>
+        </div>
+        <div class="creator container">
+          <span>Creator: </span>
+          <p><%= data.creator.email %></p>
+        </div>
+        <div class="expired-date container">
+          <span>Expired Date: </span>
+          <p><%= data.expired_at %></p>
+        </div>
+        <div class="progress-status container">
+          <span>Is Progressing?: </span>
+          <% if (data.is_progressing) { %>
+            <p class="yes-text">YES</p>
+          <% } else { %>
+            <p class="no-text">NO</p>
+          <% } %>
+        </div>
+        <div class="options container">
+          <span>Options:</span>
+          <% if (isExpired) { %>
+            <div class="vote-expired-result">
+              <p><%= topOptions %> :</p>
+              <p><%= maxVoteCounts %></p>
+            </div>
+          <% } else { %>
+            <ul class="options-container">
+              <% data.options.forEach((option, index) => { %>
+                <% if (isCreator) { %>
+                  <li class="option-container">
+                    <form action="/votings/<%= data._id %>" class="option-form" method="post">
+                      <div class="option">
+                        <p class="option-name"><%= option.option %> : </p>
+                        <input type="hidden" name="optionIndex" value="<%= index %>">
+                        <button type="submit"><%= option.option %></button>
+                      </div>
+                      <p class="vote-result">Result: <%= option.counts %></p>
+                    </form>
+                  </li>
+                <% } else { %>
+                  <li class="option-container">
+                    <form action="/votings/<%= data._id %>" class="option-form" method="post">
+                      <p><%= option.option %> : </p>
+                      <input type="hidden" name="optionIndex" value="<%= index %>">
+                      <button type="submit"><%= option.option %></button>
+                    </form>
+                  </li>
+                <% } %>
+              <% }); %>
+            </ul>
+          <% } %>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

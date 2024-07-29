@@ -1,0 +1,21 @@
+<%- include("head") %>
+<link rel="stylesheet" href="/stylesheets/modal.css" />
+</head>
+<body>
+  <%- include("navigation") %>
+  <main>
+    <div class="modal-background">
+      <div class="modal-container">
+        <p class="modal-title"><%= title %></p>
+        <p class="modal-content"><%= message %></p>
+        <div class="button-container">
+          <button class="home-button">Main</button>
+          <% if (title !== "Success") { %>
+            <button class="back-button">Back</button>
+          <% } %>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

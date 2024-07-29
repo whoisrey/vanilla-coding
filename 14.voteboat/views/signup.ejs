@@ -1,0 +1,38 @@
+<%- include("head") %>
+<link rel="stylesheet" href="/stylesheets/users.css" />
+</head>
+<body>
+  <%- include("navigation") %>
+  <main>
+    <form class="signup-form" method="post">
+      <div class="signup-inputs">
+        <div class="signup-email-container">
+          <label for="signupEmail" class="signup-email-label">
+            <span>Email:</span>
+            <input id="signupEmail" class="signup-email" type="email" name="email" autocomplete="off">
+          </label>
+          <p class="signup-email-error message">Email address is required</p>
+        </div>
+        <div class="signup-password-container">
+          <label for="userPassword" class="signup-password-label">
+            <span>Password:</span>
+            <input id="userPassword" class="signup-password" type="password" name="password">
+          </label>
+          <p class="signup-password-error message">Password is required</p>
+        </div>
+        <div class="signup-check-container">
+          <label for="passwordCheck" class="password-check-label">
+            <div class="password-check-title">
+              <span>Password:</span>
+              <span class="password-check-text">(Check)</span>
+            </div>
+            <input id="passwordCheck" class="password-check" type="password" name="password">
+          </label>
+          <p class="password-check-error message">Password do not match</p>
+        </div>
+      </div>
+      <button class="signup-button">SIGN UP</button>
+    </form>
+  </main>
+</body>
+</html>

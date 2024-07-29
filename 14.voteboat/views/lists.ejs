@@ -1,0 +1,44 @@
+<%- include("head") %>
+<link rel="stylesheet" href="/stylesheets/lists.css" />
+</head>
+<body>
+  <%- include("navigation") %>
+  <main>
+    <div class="list-container">
+      <ul class="vote-lists">
+        <% data?.forEach((vote) => { %>
+          <li class="vote-list">
+            <a href="/votings/<%= vote._id %>" class="vote-anchor">
+              <h2 class="vote-title"><%= vote.title %></h2>
+              <div class="creator container">
+                <span>Creator: </span>
+                <p><%= vote.creator %></p>
+              </div>
+              <div class="expired-date container">
+                <span>Expiration Date: </span>
+                <p><%= vote.expired_at.toISOString().slice(0, 10) %></p>
+              </div>
+              <div class="progress container">
+                <span>Progressing: </span>
+                <% if (vote.is_progressing) { %>
+                  <p class="yes-text">YES</p>
+                <% } else { %>
+                  <p class="no-text">NO</p>
+                <% } %>
+              </div>
+              <ul class="options-container">
+                <% vote.options.forEach((option) => { %>
+                  <li class="option-container">
+                    <span><%= option.option %>: </span>
+                    <p><%= option.counts %> polls</p>
+                  </li>
+                <% }); %>
+              </ul>
+            </a>
+          </li>
+        <% }) %>
+      </ul>
+    </div>
+  </main>
+</body>
+</html>

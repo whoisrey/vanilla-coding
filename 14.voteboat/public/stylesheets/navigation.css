@@ -1,0 +1,40 @@
+.nav-container {
+  font-family: "Pacifico", cursive;
+  font-size: var(--font-medium);
+  display: flex;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 8rem;
+  border-bottom: 2px solid var(--first-color);
+  z-index: 999;
+  background-color: var(--nav-color);
+}
+
+.nav-lists {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 2rem;
+  gap: 3rem;
+  color: var(--text-color);
+  list-style: none;
+}
+
+.home-link img {
+  cursor: pointer;
+  width: 6.5rem;
+  margin-right: 0.1rem;
+  margin-bottom: 0.8rem;
+}
+
+.nav-lists a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.nav-lists a:hover {
+  color: var(--first-color);
+  transition: all 1s;
+}
