@@ -15,4 +15,11 @@
 - 11주차 React Hook
 - 12주차 React 전역상태관리 (Redux)
 -------------- 
+- 해커톤 1차 React Redux
+-------------- 
 - 14주차 Node.js Express.js MongoDB
+- 15주차 Express.js MongoDB Render
+- 16주차 Express.js MongoDB AWS
+-------------- 
+- 해커톤 2차 Express.js React
+-------------- 
